@@ -1,0 +1,23 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+.espacio {
+    margin: 0 20%;
+}
+.config-link {
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 10 !important;
+    padding-right: 90px !important;
+    padding-bottom: 10px !important;
+}
+hr {
+    margin: 0;
+}
+.notifications {
+    margin: 0 20%;
+    padding: 15px;
+    border-radius: 10px;
+    border: #e2e2e2 solid 1px;
+    margin-top: 15px;
+}

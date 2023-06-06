@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<nav class="navbar navbar-expand-lg navbar-light espacio" style="padding: 0; padding-top: 8px;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link config-link" style="padding-right: 60px;">Cuenta</a>
+        <hr style="border-width: 2.5px; background-color: #c6ded4;">
+      </li>
+    </ul>
+  </div>
+</nav>
+<hr class="espacio">
+<p class="espacio" style="margin-top: 10px;">Actualizar detalles de la cuenta</p>
+<div class="formulario">
+  <label class="form-label">Contraseña:</label>
+  <div class="input-group">
+    <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" [(ngModel)]="inputPassword" maxlength="30" placeholder="Ingresa tu nueva contraseña">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="togglePasswordVisibility()">
+        <i class="fa-solid {{showPassword ? 'fa-eye' : 'fa-eye-slash'}}" style="font-size: 20px; color: #635d6c;"></i>
+      </button>
+    </div>
+  </div>
+  <label class="form-label">Correo electrónico:</label><br>
+  <input type="text" class="inputs" [(ngModel)]="inputEmail" maxlength="80" placeholder="nombre.usuario@gmail.com">
+  <br><label class="form-label">Fecha de nacimiento:</label><br>
+  <input type="date" class="inputs" [(ngModel)]="inputBirthdate" placeholder="{{birthdate}}" value="{{birthdate}}">
+  <div style="margin-top: 10px;">
+    <input id="myCheckbox" class="custom-checkbox" type="checkbox" [checked]="library_private" (change)="saveCheckbox()">
+    <label for="myCheckbox" class="custom-label">&nbsp;Biblioteca privada</label>
+  </div>
+  <div style="display: flex; justify-content: space-between;">
+    <button class="no-style" href="#" style="color: red" (click)="eliminarCuenta()">Cerrar cuenta</button>
+    <div></div><div></div><div></div>
+    <button class="no-style"  style="color: #70c264" (click)="editarDatosUsuario()">Guardar</button>
+    <button class="no-style" href="#" style="color: #f3464a" (click)="cancelar()">Cancelar</button>
+  </div>
+</div>
+<div style="position: fixed; bottom: 15px; right: 35px;">
+    <h4 style="font-size: 15px;">@StoryVerse</h4>
+</div>

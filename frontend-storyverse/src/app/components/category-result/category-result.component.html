@@ -1,0 +1,46 @@
+<app-navbar *ngIf="logged; else invitado"></app-navbar>
+<ng-template #invitado>
+    <app-navbarinvited></app-navbarinvited>
+</ng-template>
+<div class="category-result"> 
+    <div>
+        <h2>{{title}}</h2>
+        <hr>
+    </div>
+
+    <div class="story-result">
+        <!-- Si no hay historias, mostrar un mensaje -->
+        <div *ngIf="storiesResult.length == 0">
+            <h6>Aún no hay historias en esta categoría :(</h6> 
+        </div>
+        <mat-paginator [length]=length
+                    [pageSize]=pageSize
+                    [pageSizeOptions]="[5, 10, 25, 100]"
+                    [pageIndex]=pageIndex
+                    (page)="handlePageEvent($event)"
+                    aria-label="Select page" style="position: absolute; right: 0;">
+        </mat-paginator>
+        <div class="story" *ngFor="let story of storiesResult">
+            <br><br><br>
+            <div class="story-image" style="position: relative; display: inline-block;">
+                <a [routerLink]="['/viewstory', story.storyId]">
+                    <img class="sombra" src="{{story.urlCover}}" alt="{{story.title}}" width="100%">
+                </a>
+            </div>
+            <a [routerLink]="['/viewstory', story.storyId]">
+                <div class="story-info">
+                    <div class="title texto-largo">{{story.title}}</div>
+                    <div style="display: flex; align-items: center;">
+                        <i class="fa-solid fa-star" style="font-size: 14px; color: #635d6c;"></i>
+                        <p style="font-size: 12px; padding-left: 10px; color: #635d6c;">{{story.votes}}</p>
+                        <i class="fa-solid fa-list" style="font-size: 14px; color: #635d6c;"></i>
+                        <p style="font-size: 12px; padding-left: 10px; color: #635d6c;">{{story.cantChapters}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>        
+    </div>    
+</div>
+<div style="position: fixed; bottom: 20px; right: 30px;">
+    <h4 style="font-size: 15px; font-family: 'Montserrat', sans-serif;">@StoryVerse</h4>
+</div>

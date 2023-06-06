@@ -1,0 +1,105 @@
+<app-navbar></app-navbar>
+<div class="home">
+    <br>
+    <div class="title">
+        <h2>Bienvenid@ a StoryVerse, {{user.preferred_username}}</h2>
+        <hr>
+    </div>
+    <div class="first-div">
+        <div style="padding: 0 8%;">
+            <h3>Historias populares</h3>
+
+            <div class="popular">
+                <div class="story" *ngFor="let story of storiesPopular">
+                    <a [routerLink]="['/viewstory', story.storyId]" class="sin-nada">
+                        <div class="story-image">
+                            <img [src]="story.urlCover" alt="{{story.title}}" width="100%"
+                                style="height: 314px; object-fit: cover;">
+                        </div>
+                        <h5 style="position: absolute; color: #5e5e5e; font-weight: bold;">{{story.title}}</h5>
+                        <div class="story-info" style="float: right;">
+
+                            <div class="category">
+                                
+                                <h6>{{getCategoryName(story.categoryId)}}</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="storyMostPopular">
+        <div class="storyMostPopular-info">
+            <a [routerLink]="['/viewstory', storyMostPopular.storyId]" class="sin-nada">
+                <div style="display: flex; align-items: center;">
+                    <img src="{{storyMostPopular.urlCover}}" alt="{{storyMostPopular.title}}" width="100%"
+                        style="height: 314px; object-fit: cover;">
+                </div>
+                </a>
+                <div style="display: flex; align-items: center;">
+                    <div>
+                        <h3 style="padding-top: 0;">{{storyMostPopular.title}}</h3>
+                        <p>{{storyMostPopular.description}}</p>
+                        <div class="storyTags">
+                            <span *ngFor="let tag of tagStoryMostPopular; let i = index"
+                                [ngStyle]="{'background-color': colors[i%colors.length]}">
+                                {{ tag }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <div style="background-color: #c7bad8;">
+        <div style="padding: 1% 8%;">
+            <h3 style="margin-bottom: 5px;">Nuestras recomendaciones</h3>
+            
+            <h4 style="margin-bottom: 15px;">Estas son algunas de las historias que te recomendamos leer :D</h4>
+            <div class="remember">
+                <div class="story" *ngFor="let story of storiesToRemember">
+                    <a [routerLink]="['/viewstory', story.storyId]" class="sin-nada">
+                        <div class="story-image">
+                            <img src="{{story.urlCover}}" alt="{{story.title}}" width="100%"
+                                style="height: 314px; object-fit: cover;">
+                        </div>
+                        <h5 style="position: absolute; color: #5e5e5e; font-weight: bold;">{{story.title}}</h5>
+                        
+                        <div class="story-info" style="float: right;">
+                            <div class="category">
+                                <h6>{{getCategoryName(story.categoryId)}}</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="last-div">
+        <div style="padding: 1% 8%;">
+            <h3>Descubre algo nuevo</h3>
+            <div class="new">
+                <div class="story" *ngFor="let story of storiesNew">
+                    <a [routerLink]="['/viewstory', story.storyId]" class="sin-nada">
+                    <div class="story-image">
+                        <img src="{{story.urlCover}}" alt="{{story.title}}" width="100%"
+                            style="height: 314px; object-fit: cover;">
+                    </div>
+                    <h5 style="position: absolute; color: #5e5e5e; font-weight: bold;">{{story.title}}</h5>
+                        
+                    <div class="story-info" style="float: right;">
+                        <div class="category">
+                            <h6>{{getCategoryName(story.categoryId)}}</h6>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        style="display: flex; justify-content: end; background-color: #c6ded4; margin-bottom: 0; padding-bottom: 10px; padding-right: 25px;">
+        <h4>@StoryVerse</h4>
+    </div>
+</div>

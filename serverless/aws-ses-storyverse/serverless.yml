@@ -1,0 +1,33 @@
+service: aws-ses-storyverse
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - ses:*
+      Resource: "*"
+      
+functions:
+  sendEmail:
+    handler: src/sendEmail.handler
+    name: send-email
+    description: Send email to user
+    memorySize: 128
+    events:
+      - httpApi:
+          path: /send-email
+          method: POST
+  verifyEmail:
+    handler: src/verifyEmail.handler
+    name: verify-email
+    description: Verify email
+    memorySize: 128
+    events:
+      - httpApi:
+          path: /verify-email
+          method: post
+

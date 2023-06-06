@@ -1,0 +1,10 @@
+### customer
+GET http://localhost:7070/customer/list
+### account
+GET http://localhost:6060/account/list
+### Entrar por el gateway customer
+GET http://localhost:8282/ms-customer/customer/list
+### Entrar por el gateway account
+GET http://localhost:8282/ms-account/account/list
+### Currency list
+GET http://localhost:8282/currency-converter/api/currency/user

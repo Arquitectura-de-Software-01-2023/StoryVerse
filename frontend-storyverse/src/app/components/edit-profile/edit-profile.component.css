@@ -1,0 +1,81 @@
+h1 {
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 100;
+}
+h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+    margin: 1px 1px 6px 3px;
+}
+.logo {
+    padding: 0px 4px;
+    border-radius: 100%;
+    background-color: #c7bad8;
+    margin-left: 15px;
+}
+.buttons {
+    height: 74px;
+    padding: 0 24px;
+}
+.profile {
+    font-family: 'Montserrat', sans-serif;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+h4 {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+p {
+    margin-bottom: 0;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 100;
+}
+.espacio {
+    margin: 0 10%;
+}
+/*Descripción - historias*/
+.description {
+    margin: 25px 30%;
+}
+.sombra {
+    border-radius: 10px;
+    box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.1);
+}
+textarea {
+    margin-top: 8px;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.image-header {
+    font-size: 12px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    outline: none;
+    border: #c7bad8;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.image-pfp {
+    font-size: 12px;
+    border-radius: 100%;
+    outline: none;
+    border: #c7bad8;
+    border: 1px solid #ccc;
+    padding: 5px 7px;
+}

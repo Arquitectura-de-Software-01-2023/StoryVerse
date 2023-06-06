@@ -1,0 +1,44 @@
+service: aws-notification-crud-storyverse
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource: "arn:aws:dynamodb:us-east-1:466906930597:table/NotificationTable"
+
+functions:
+  createNotification:
+    handler: src/addNotification.addNotification
+    name: createNotification
+    description: Create a new notification
+    events:
+      - httpApi:
+          path: /notification
+          method: post
+  getNotifications:
+    handler: src/getMyNotifications.getMyNotifications
+    name: getNotifications
+    description: Get all my notifications
+    events:
+      - httpApi:
+          path: /notification/{owner}
+          method: get
+
+resources:
+  Resources:
+    NotificationTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: NotificationTable
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST

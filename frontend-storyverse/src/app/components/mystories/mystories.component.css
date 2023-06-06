@@ -1,0 +1,44 @@
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+.sin-nada:link, .sin-nada:visited, .sin-nada:active {
+    text-decoration: none;
+}
+.purple-button {
+    outline: none;
+    border: 0 !important;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    color: white;
+    font-size: 14px;
+    padding: 0px 20px;
+    background-color: #c7bad8;
+}
+.mystories {
+    margin: 25px 0;
+    box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.1);
+}
+.sombra {
+    border-radius: 10px;
+}
+.story {
+    padding: 20px 30px;
+}
+.p-icon {
+    font-size: 12px;
+    padding-left: 6px; 
+    padding-right: 15px;
+    color: #635d6c;
+    margin: 0;
+}
+.plomo:active {
+    background-color: #c7bad8;
+    color: white;
+}

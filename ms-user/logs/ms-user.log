@@ -1,0 +1,803 @@
+12:58:32.561 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://ms-config-server:8888
+12:58:34.467 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://ms-config-server:8888. Will be trying the next url if available
+12:58:34.602 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://ms-config-server:8888/ms-user/test": ms-config-server; nested exception is java.net.UnknownHostException: ms-config-server
+12:58:34.753 [main] INFO  c.example.msuser.MsUserApplicationKt - The following 1 profile is active: "test"
+12:58:44.598 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:58:45.426 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 748 ms. Found 2 JPA repository interfaces.
+12:58:49.132 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6977b820-a3ae-3e85-98b0-76c13345950f
+12:58:57.556 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8008 (http)
+12:58:57.696 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8008"]
+12:58:57.789 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:58:57.850 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+12:58:59.553 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:58:59.592 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 24569 ms
+12:59:07.474 [pool-1-thread-1] WARN  o.s.c.s.a.z.ZipkinAutoConfiguration - Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+12:59:19.538 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+12:59:33.432 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:59:33.713 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+12:59:34.436 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+12:59:35.453 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:59:38.295 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:59:38.347 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:59:45.513 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:00:02.689 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+13:00:02.866 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+13:00:05.256 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+13:00:06.278 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 27 endpoint(s) beneath base path '/actuator'
+13:00:07.193 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+13:00:07.650 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+13:00:07.668 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:00:07.911 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+13:00:07.917 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+13:00:07.921 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+13:00:07.931 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+13:00:07.932 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+13:00:07.933 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+13:00:07.933 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+13:00:08.582 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+13:00:08.589 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+13:00:08.611 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+13:00:08.635 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1685984408633 with initial instances count: 1
+13:00:08.760 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS-USER with eureka with status UP
+13:00:08.766 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1685984408766, current=UP, previous=STARTING]
+13:00:08.780 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008: registering service...
+13:00:08.783 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8008"]
+13:00:08.892 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8008 (http) with context path ''
+13:00:08.897 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8008
+13:00:08.947 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008 - registration status: 204
+13:00:10.272 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+13:00:10.360 [main] INFO  c.example.msuser.MsUserApplicationKt - Started MsUserApplicationKt in 108.559 seconds (JVM running for 111.557)
+13:00:10.377 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [sparrow-01.rmq.cloudamqp.com:5672]
+13:00:11.407 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#9863ed5:0/SimpleConnection@64231d5d [delegate=amqp://ycjhbtfr@3.73.223.59:5672/ycjhbtfr, localPort= 56884]
+13:01:42.922 [http-nio-8008-exec-1] INFO  o.k.adapters.KeycloakDeployment - Loaded URLs from http://localhost:8080/realms/software/.well-known/openid-configuration
+13:01:43.098 [http-nio-8008-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:01:43.098 [http-nio-8008-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:01:43.102 [http-nio-8008-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+13:01:44.202 [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] WARN  z.r.AsyncReporter$BoundedAsyncReporter - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+13:01:44.206 [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] WARN  z.r.AsyncReporter$BoundedAsyncReporter - Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:67)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:666)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140)
+	at zipkin2.Call$Base.execute(Call.java:391)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:279)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:384)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:406)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1312)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1245)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1131)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1060)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 11 common frames omitted
+13:05:07.952 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:05:27.587 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:27.770 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:28.100 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:28.137 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:28.178 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:05:28.430 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:05:28.432 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion para obtener seguidores de un usuario
+13:05:28.580 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Seguidores obtenidos
+13:05:28.581 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: a5ae35d8-a661-4062-bc82-0d735206168f
+13:05:28.665 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=a5ae35d8-a661-4062-bc82-0d735206168f, username=micaela.gordillo, email=micaela.gordillo1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Sat Mar 16 20:00:00 BOT 2002], description=[Hola], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cf9d8b9c-94fb-4903-b1e1-5e3aabe1445f.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cdebf21a-ea5b-4b74-a8ea-6dd785ba7a3b.jpeg]))
+13:05:28.668 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Informacion de los seguidores obtenida
+13:05:29.396 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:05:29.398 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:05:29.445 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:05:29.453 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:05:36.061 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:36.149 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:37.287 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:37.324 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:39.088 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:39.139 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:39.392 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: a5ae35d8-a661-4062-bc82-0d735206168f
+13:05:39.420 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=a5ae35d8-a661-4062-bc82-0d735206168f, username=micaela.gordillo, email=micaela.gordillo1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Sat Mar 16 20:00:00 BOT 2002], description=[Hola], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cf9d8b9c-94fb-4903-b1e1-5e3aabe1445f.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cdebf21a-ea5b-4b74-a8ea-6dd785ba7a3b.jpeg]))
+13:05:40.051 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:40.068 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:42.823 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:42.878 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:44.743 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:44.778 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:44.804 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:44.852 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:44.888 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:44.908 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:46.471 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:46.493 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:49.518 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:49.570 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:50.722 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:50.755 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:51.038 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: d79d9408-0e26-429e-a53c-4d1915b1bbe8
+13:05:51.061 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))
+13:05:52.301 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:52.316 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:56.589 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:56.618 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:56.742 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:05:56.774 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:05:56.851 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:05:56.879 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:06:03.057 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:03.127 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:03.152 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:03.188 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:06.026 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:06.078 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:06.587 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: a5ae35d8-a661-4062-bc82-0d735206168f
+13:06:06.640 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=a5ae35d8-a661-4062-bc82-0d735206168f, username=micaela.gordillo, email=micaela.gordillo1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Sat Mar 16 20:00:00 BOT 2002], description=[Hola], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cf9d8b9c-94fb-4903-b1e1-5e3aabe1445f.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cdebf21a-ea5b-4b74-a8ea-6dd785ba7a3b.jpeg]))
+13:06:17.659 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:17.697 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:17.838 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:17.865 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:17.970 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:06:18.069 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:06:20.278 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:20.350 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:20.356 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:20.383 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:23.477 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:23.514 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:24.143 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: d79d9408-0e26-429e-a53c-4d1915b1bbe8
+13:06:24.181 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))
+13:06:30.706 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:30.747 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:30.875 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:06:30.942 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:06:31.036 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:06:31.112 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:07:06.548 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:07:06.578 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:07:06.678 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:07:06.715 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:07:06.809 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:07:06.879 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:07:10.560 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:07:10.607 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:07:10.630 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:07:10.676 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:07:11.336 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: a5ae35d8-a661-4062-bc82-0d735206168f
+13:07:11.374 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=a5ae35d8-a661-4062-bc82-0d735206168f, username=micaela.gordillo, email=micaela.gordillo1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Sat Mar 16 20:00:00 BOT 2002], description=[Hola], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cf9d8b9c-94fb-4903-b1e1-5e3aabe1445f.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cdebf21a-ea5b-4b74-a8ea-6dd785ba7a3b.jpeg]))
+13:07:13.890 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:07:13.943 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:07:14.146 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:07:14.179 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:07:14.199 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:07:14.245 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:08:28.364 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:08:28.364 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:08:28.411 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:08:28.419 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:08:28.836 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: d79d9408-0e26-429e-a53c-4d1915b1bbe8
+13:08:28.856 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))
+13:08:31.200 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:08:31.249 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:08:31.438 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:08:31.466 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:08:31.500 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:08:31.563 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:08:37.552 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:08:37.587 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:08:37.588 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:08:37.617 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:08:37.715 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:08:37.738 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:10:07.956 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:15:07.967 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:20:07.975 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:25:07.978 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:25:31.108 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:25:31.148 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:25:31.264 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:25:31.281 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:25:31.416 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+13:25:31.456 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+13:25:41.359 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:25:41.389 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:25:42.276 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:25:42.305 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:25:57.339 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:25:57.356 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:26:00.941 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:26:00.958 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:30:07.980 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:35:07.989 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:40:08.000 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:42:27.011 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:42:27.102 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:42:34.195 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:42:34.251 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:42:54.128 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:42:54.169 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:43:07.396 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:43:07.429 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:43:08.182 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:43:08.198 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:45:08.005 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:49:42.064 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:49:42.114 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:49:53.303 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:49:53.381 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:50:08.022 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:50:11.328 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:50:11.368 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:50:31.233 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:50:31.274 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:50:52.982 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:50:53.063 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:50:57.249 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:50:57.278 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:51:47.568 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:51:47.612 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:53:13.793 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:53:13.827 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:53:14.761 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:53:14.803 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:53:21.009 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:53:21.033 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:53:21.685 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:53:21.750 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:54:04.407 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:54:04.431 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:55:08.032 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:55:40.535 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:55:40.709 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+13:56:32.849 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+13:56:33.136 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:00:08.044 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:05:08.054 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:10:08.079 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:11:34.496 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:11:34.537 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:11.414 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:11.448 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:27.052 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:27.096 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:28.162 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:28.192 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:31.158 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:31.180 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:31.906 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:32.095 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:42.776 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:42.796 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:42.970 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:43.020 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+14:12:43.021 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:43.124 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+14:12:43.131 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion para obtener seguidores de un usuario
+14:12:43.175 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Seguidores obtenidos
+14:12:43.183 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: a5ae35d8-a661-4062-bc82-0d735206168f
+14:12:43.252 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=a5ae35d8-a661-4062-bc82-0d735206168f, username=micaela.gordillo, email=micaela.gordillo1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Sat Mar 16 20:00:00 BOT 2002], description=[Hola], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cf9d8b9c-94fb-4903-b1e1-5e3aabe1445f.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cdebf21a-ea5b-4b74-a8ea-6dd785ba7a3b.jpeg]))
+14:12:43.255 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Informacion de los seguidores obtenida
+14:12:43.343 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+14:12:43.348 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+14:12:43.388 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+14:12:43.398 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+14:12:45.846 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:45.875 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:45.963 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:45.985 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+14:12:45.985 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:46.017 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+14:12:50.326 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:50.379 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:50.398 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:50.425 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:50.672 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Obteniendo usuario por id: a5ae35d8-a661-4062-bc82-0d735206168f
+14:12:50.701 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: PublicUserDto(id=a5ae35d8-a661-4062-bc82-0d735206168f, username=micaela.gordillo, email=micaela.gordillo1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Sat Mar 16 20:00:00 BOT 2002], description=[Hola], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cf9d8b9c-94fb-4903-b1e1-5e3aabe1445f.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/cdebf21a-ea5b-4b74-a8ea-6dd785ba7a3b.jpeg]))
+14:12:52.973 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:53.000 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:53.087 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+14:12:53.104 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+14:12:53.122 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario por username
+14:12:53.150 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo el usuario: [PublicUserDto(id=d79d9408-0e26-429e-a53c-4d1915b1bbe8, username=naomi, email=naomi.tacachira1@gmail.com, attributes=PublicAttributesItemsDto(birthdate=[Thu Jun 22 20:00:00 BOT 2023], description=[Hola soy naomi ?], libraryPrivate=[false], urlHeader=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg], urlPfp=[https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg]))]
+14:15:08.099 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:20:08.108 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:25:08.114 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:30:08.118 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:35:08.123 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:40:08.124 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:45:08.128 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:50:08.131 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:55:08.140 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:00:08.142 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:05:08.152 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:10:08.167 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:15:08.170 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:17:32.458 [Thread-3] INFO  o.s.c.s.a.z.ZipkinAutoConfiguration - Flushing remaining spans on shutdown
+15:17:32.627 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS-USER with eureka with status DOWN
+15:17:32.627 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1685992652627, current=DOWN, previous=UP]
+15:17:32.629 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008: registering service...
+15:17:32.663 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008 - registration status: 204
+15:17:32.978 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:17:34.050 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+15:17:37.062 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+15:17:37.134 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008 - deregister  status: 200
+15:17:37.162 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+17:18:50.455 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://ms-config-server:8888
+17:18:52.398 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://ms-config-server:8888. Will be trying the next url if available
+17:18:52.516 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://ms-config-server:8888/ms-user/test": ms-config-server; nested exception is java.net.UnknownHostException: ms-config-server
+17:18:52.632 [main] INFO  c.example.msuser.MsUserApplicationKt - The following 1 profile is active: "test"
+17:19:00.949 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:19:01.511 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 532 ms. Found 2 JPA repository interfaces.
+17:19:03.282 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6977b820-a3ae-3e85-98b0-76c13345950f
+17:19:08.583 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8008 (http)
+17:19:08.629 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8008"]
+17:19:08.644 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:19:08.646 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+17:19:09.047 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:19:09.048 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 16200 ms
+17:19:13.661 [pool-1-thread-1] WARN  o.s.c.s.a.z.ZipkinAutoConfiguration - Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+17:19:17.415 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+17:19:20.127 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+17:19:20.231 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+17:19:20.506 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:19:21.054 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+17:19:21.949 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:19:21.970 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:19:24.378 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:19:29.937 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+17:19:30.032 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+17:19:31.139 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+17:19:31.507 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 27 endpoint(s) beneath base path '/actuator'
+17:19:31.707 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+17:19:31.842 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+17:19:31.854 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:19:31.900 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+17:19:31.901 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+17:19:31.901 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+17:19:31.902 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+17:19:31.902 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+17:19:31.903 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+17:19:31.903 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+17:19:32.225 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+17:19:32.230 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+17:19:32.235 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+17:19:32.245 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1685999972244 with initial instances count: 1
+17:19:32.293 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS-USER with eureka with status UP
+17:19:32.296 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1685999972296, current=UP, previous=STARTING]
+17:19:32.299 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008: registering service...
+17:19:32.300 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8008"]
+17:19:32.352 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8008 (http) with context path ''
+17:19:32.358 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8008
+17:19:32.384 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008 - registration status: 204
+17:19:33.560 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+17:19:33.667 [main] INFO  c.example.msuser.MsUserApplicationKt - Started MsUserApplicationKt in 54.54 seconds (JVM running for 62.213)
+17:19:33.694 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [sparrow-01.rmq.cloudamqp.com:5672]
+17:19:34.683 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#4fc84c92:0/SimpleConnection@581c0da6 [delegate=amqp://ycjhbtfr@3.73.223.59:5672/ycjhbtfr, localPort= 61742]
+17:24:31.908 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:29:31.922 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:29:59.019 [http-nio-8008-exec-1] INFO  o.k.adapters.KeycloakDeployment - Loaded URLs from http://localhost:8080/realms/software/.well-known/openid-configuration
+17:29:59.219 [http-nio-8008-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:29:59.221 [http-nio-8008-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:29:59.230 [http-nio-8008-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+17:29:59.455 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:29:59.456 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:29:59.594 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:29:59.595 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:29:59.854 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:29:59.899 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:30:00.802 [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] WARN  z.r.AsyncReporter$BoundedAsyncReporter - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+17:30:00.816 [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] WARN  z.r.AsyncReporter$BoundedAsyncReporter - Dropped 3 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:67)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:666)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140)
+	at zipkin2.Call$Base.execute(Call.java:391)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:279)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:384)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:406)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1312)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1245)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1131)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1060)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 11 common frames omitted
+17:31:12.628 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:31:12.660 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:31:12.707 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:31:12.738 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:31:12.778 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:31:12.825 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:31:42.834 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:31:42.875 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:31:42.900 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:31:42.942 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:31:43.166 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:31:43.200 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:32:32.148 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:32:32.152 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:32:32.324 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:32:32.325 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:32:32.519 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:32:32.547 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:32:39.196 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:32:39.247 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:32:39.350 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:32:39.378 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:33:29.074 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:33:29.104 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:33:29.242 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:33:29.264 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:33:41.695 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:33:41.725 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:33:41.822 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:33:41.864 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:34:14.756 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:34:14.786 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:34:14.885 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:34:14.923 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:34:31.936 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:34:49.953 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:34:49.984 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:34:50.081 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:34:50.109 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:35:17.020 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:35:17.049 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:35:17.179 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:35:17.203 [http-nio-8008-exec-8] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:36:08.541 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:36:08.602 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:36:08.699 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:36:08.723 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:37:14.890 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:37:14.927 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:37:15.025 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:37:15.061 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:37:37.501 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:37:37.550 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:37:37.694 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:37:37.740 [http-nio-8008-exec-4] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:37:44.553 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:37:44.579 [http-nio-8008-exec-5] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:37:44.669 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:37:44.697 [http-nio-8008-exec-6] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:39:31.943 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:39:48.370 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:39:48.444 [http-nio-8008-exec-7] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:39:48.595 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:39:48.619 [http-nio-8008-exec-9] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:40:14.731 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:40:14.792 [http-nio-8008-exec-10] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:40:14.886 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:40:14.906 [http-nio-8008-exec-1] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:40:31.654 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:40:31.711 [http-nio-8008-exec-2] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:40:31.795 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Realizando peticion a Keycloak para obtener el usuario con token
+17:40:31.811 [http-nio-8008-exec-3] INFO  com.example.msuser.bl.UserBl - Se obtuvo al usuario: UserDto(sub=d79d9408-0e26-429e-a53c-4d1915b1bbe8, email=naomi.tacachira1@gmail.com, preferred_username=naomi, birthdate=Thu Jun 22 20:00:00 BOT 2023, library_private=false, url_pfp=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/868a8680-97ed-44c3-9a1b-f80328727695.jpeg, url_header=https://aws-storyverse-bucket-dev.s3.amazonaws.com/images/617c461a-7fbf-435b-b25c-707611d1553b.jpeg, description=Hola soy naomi ?)
+17:43:53.731 [AMQP Connection 3.73.223.59:5672] WARN  c.r.c.impl.ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+17:44:52.922 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:49:52.932 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:54:53.044 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:55:24.537 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8723/eureka/} exception=I/O error on PUT request for "http://localhost:8723/eureka/apps/MS-USER/localhost:ms-user:8008": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8723/eureka/apps/MS-USER/localhost:ms-user:8008": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 19 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 32 more
+
+17:55:24.555 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8723/eureka/} exception=I/O error on GET request for "http://localhost:8723/eureka/apps/delta": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8723/eureka/apps/delta": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:155)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1135)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1016)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1531)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 22 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 35 more
+
+17:55:24.819 [DiscoveryClient-HeartbeatExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on PUT request for "http://localhost:8723/eureka/apps/MS-USER/localhost:ms-user:8008": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+17:55:25.556 [DiscoveryClient-CacheRefreshExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on GET request for "http://localhost:8723/eureka/apps/delta": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+17:55:25.657 [Thread-3] INFO  o.s.c.s.a.z.ZipkinAutoConfiguration - Flushing remaining spans on shutdown
+17:55:25.682 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS-USER with eureka with status DOWN
+17:55:25.694 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1686002125694, current=DOWN, previous=UP]
+17:55:25.691 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8723/eureka/}, exception=I/O error on PUT request for "http://localhost:8723/eureka/apps/MS-USER/localhost:ms-user:8008": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8723/eureka/apps/MS-USER/localhost:ms-user:8008": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 20 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 33 more
+
+17:55:28.676 [DiscoveryClient-HeartbeatExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on PUT request for "http://localhost:8723/eureka/apps/MS-USER/localhost:ms-user:8008": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+17:55:28.672 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008: registering service...
+17:55:28.856 [DiscoveryClient-HeartbeatExecutor-0] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+17:55:25.699 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8723/eureka/}, exception=I/O error on GET request for "http://localhost:8723/eureka/apps/delta": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8723/eureka/apps/delta": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:155)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1135)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1016)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1531)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 23 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 36 more
+
+17:55:28.861 [DiscoveryClient-CacheRefreshExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on GET request for "http://localhost:8723/eureka/apps/delta": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+17:55:28.890 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8723/eureka/}, exception=I/O error on POST request for "http://localhost:8723/eureka/apps/MS-USER": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8723/eureka/apps/MS-USER": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 22 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 35 more
+
+17:55:28.960 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-USER/localhost:ms-user:8008 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1135)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1016)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1531)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+17:55:29.215 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'

@@ -1,0 +1,98 @@
+<app-navbar *ngIf="logged; else invitado"></app-navbar>
+<ng-template #invitado>
+    <app-navbarinvited></app-navbarinvited>
+</ng-template>
+
+<div class="viewstory">
+    <div class="viewstory-left" style="cursor: pointer;" *ngIf="logged; else invitados">
+        <img class="sombra" src="{{storyMostPopular.urlCover}}" alt="{{storyMostPopular.title}}" width="100%" style="height: 314px;">
+        <div class="viewstory-left" [routerLink]="['/',infowriter.username,'profile']">
+            <img src="{{infowriter.url_pfp}}" alt="Foto de perfíl" width="80px" style="border-radius: 100%; height: 80px;">
+            <h1 class="username">{{infowriter.username}}</h1>
+            <hr class="line">
+            <h2 class="useremail">{{infowriter.email}}</h2>
+        </div>
+    </div>
+    <ng-template #invitados>
+        <div class="viewstory-left" style="cursor: pointer;">
+            <img class="sombra" src="{{storyMostPopular.urlCover}}" alt="{{storyMostPopular.title}}" width="100%" style="height: 314px;">
+            <div class="viewstory-left" [routerLink]="['/',infowriter.username,'profile']">
+                <img src="../../../assets/profile/pfp.svg" alt="Foto de perfíl" width="80px" style="border-radius: 100%; height: 80px;">
+                <h1 class="username">Autor</h1>
+                <hr class="line">
+                <h2 class="useremail"> </h2>
+            </div>
+        </div>
+    </ng-template>
+    <div class="viewstory-right">
+        <div class="title-story">
+            <strong>{{storyMostPopular.title}}</strong>
+        </div>
+        <div style="display: flex; gap: 25px;">
+            <div id="vote-button" *ngIf="logged; else invitadoVoto" class="cuadros" style="cursor: pointer;" (click)="Votar()">
+                <i class="fa-solid fa-star" style="font-size: 16px; color: #635d6c;"></i>
+                <p style="font-size: 12px; padding-left: 10px; padding-right: 10px; height: 0vh; color: #635d6c;">{{storyMostPopular.votes}}</p>
+            </div>
+            <ng-template #invitadoVoto>
+                <div class="cuadros">
+                    <i class="fa-solid fa-star" style="font-size: 16px; color: #635d6c;"></i>
+                    <p style="font-size: 12px; padding-left: 10px; padding-right: 10px; height: 0vh; color: #635d6c; cursor: context-menu;" >{{storyMostPopular.votes}}</p>
+                </div>
+            </ng-template>
+            <div class="cuadros">
+                <i class="fa-solid fa-list" style="font-size: 16px; color: #635d6c;"></i>
+                <p style="font-size: 12px; padding-left: 10px; height: 0vh; color: #635d6c;">{{Chapters.length}}</p>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin: 25px 0;">
+            <button class="purple btn-style" *ngIf="Chapters.length>0" [routerLink]="['/viewchapter', id, Chapters[0].chapterId]">
+                Leer ahora
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button *ngIf="logged" (click)="Agregar()" class="pink btn-style">
+                Añadir a mi biblioteca 
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+        <div>
+            <p class="description-story">
+                {{storyMostPopular.description}}
+            </p>
+        </div>
+        <hr>
+        <div>
+            <h1 class="title-info">Información de la historia</h1>
+            <div style="display: flex; align-items: center;">   
+                <h2 class="h2-info">Género:</h2>&nbsp;&nbsp;
+                <h3 style="font-size: 20px; margin-bottom: 10px;">{{storyMostPopular.categoria}}</h3>
+            </div>
+            <h2 class="h2-info">Etiquetas</h2>
+            <div class="storyTags" style="margin-bottom: 40px;">
+                <div *ngIf="tagStoryMostPopular.length>0">
+                    <span *ngFor="let tag of tagStoryMostPopular; let i = index" [ngStyle]="{'background-color': colors[i%colors.length]}" style="margin-bottom: 8px;">
+                        {{ tag }}
+                    </span>
+                </div>
+                <span *ngIf="tagStoryMostPopular.length==0" style="background-color: #b2d9e8;">
+                    No hay etiquetas
+                </span>
+            </div>
+        </div>
+        <div>
+            <h2 class="title-info">Capítulos</h2>
+            <!-- Si no hay capitulos, mostrar un mensaje -->
+            <h6 *ngIf="Chapters.length==0">Esta historia aún no tiene capítulos disponibles 😢</h6>
+            <div *ngFor="let chapter of Chapters; let i = index">
+                <div class="chapter-story" [routerLink]="['/viewchapter', storyMostPopular.storyId, chapter.chapterId]">
+                    <div class="number-chapter">{{i+1}}</div>
+                    <div>{{chapter.title}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="position: fixed; bottom: 20px; right: 30px;">
+    <h4 style="font-size: 15px; font-family: 'Montserrat', sans-serif;">@StoryVerse</h4>
+</div>
+<!--Iconos-->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" integrity="tu-clave-de-api" crossorigin="anonymous">

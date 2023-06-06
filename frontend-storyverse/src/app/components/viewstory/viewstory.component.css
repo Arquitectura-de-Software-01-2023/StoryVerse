@@ -1,0 +1,134 @@
+.viewstory{
+    margin: 25px 20%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Lado izquierdo*/
+.viewstory-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sombra {
+    border-radius: 10px;
+    align-content: center;
+    margin-bottom: 25px;
+    /* max-height: 330px; */
+    /* aspect-ratio: 1/1.5; */
+    width: 200px;
+}
+.username {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+.line {
+    border: 2px solid #c7bad8;
+    width: 90%;
+}
+.useremail {
+    font-size: 15px;
+    color: #7e7c79;
+    margin: 8px 0;
+}
+
+/*Lado derecho*/
+.viewstory-right {
+    margin-left: 25px;
+}
+.title-story {
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.cuadros {
+    display: flex;
+    align-items: center;
+    background-color: #d6d3da;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+.btn-style {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    gap: 10px;
+}
+.purple {
+    background-color: #a99cb1;
+}
+.pink {
+    background-color: #FFC0CB;
+}
+.purple:hover {
+    border: 1px solid #a99cb1;
+    color: #a99cb1;
+    background-color: white;
+}
+.pink:hover {
+    border: 1px solid #FFC0CB;
+    color: #FFC0CB;
+    background-color: white;
+}
+.description-story {
+    border-left: 1px solid #c7bad8;
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+/*Informacion*/
+.title-info {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 20px 0px;
+}
+.h2-info {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/*Tags*/
+.storyTags span {
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-right: 15px;
+    color: white;
+}
+/*Capitulo*/
+.chapter-story {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #c7bad8;
+    border-radius: 10px;
+    gap: 20px;
+    cursor: pointer;
+}
+.number-chapter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 100%;
+    background-color: #c6ded4;
+    color: white;
+}
+
+#vote-button:hover{
+    background-color: #c6ded4;
+    color: white;
+}

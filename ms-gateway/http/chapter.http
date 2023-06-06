@@ -1,0 +1,35 @@
+### Publicar un capítulo - crear - POST
+POST http://localhost:8111/api/v1/story/chapter/new
+Accept: application/json
+Content-Type: application/json
+
+{
+  "storyId": 10,
+  "title": "Capítulo 2",
+  "description": "Descripción del capítulo 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies.",
+  "publicationDate": "2021-01-01T00:00:00.000Z",
+  "status": true
+}
+
+### Obtener lista de capítulos - mediante storyId
+GET http://localhost:8111/api/v1/story/6/chapter/list
+
+### Obtener los datos de un capítulo - mediante chapterId
+GET http://localhost:8111/api/v1/story/chapter?chapterId=1
+
+### Actualizar un capítulo - PUT
+PUT http://localhost:8111/api/v1/story/chapter
+Accept: application/json
+Content-Type: application/json
+
+{
+  "chapterId": 1,
+  "storyId": 1,
+  "title": "Capítulo 7",
+  "description": "Descripción del capítulo 7: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies.",
+  "publicationDate": "2021-01-01T00:00:00.000Z",
+  "status": true
+}
+
+### Eliminar un capitulo - eliminación lógica - DELETE
+DELETE http://localhost:8111/api/v1/story/chapter?chapterId=1

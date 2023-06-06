@@ -1,0 +1,193 @@
+# Configuramos el puerto de la aplicación
+server:
+  port: 7777
+
+spring:
+  # Nombre del microservicio
+  application:
+    name: ms-story
+  # Configuracion de RabbitMQ
+  rabbitmq:
+    host: sparrow-01.rmq.cloudamqp.com
+    port: 5672
+    username: ycjhbtfr
+    password: NEpxuzzhJCmOxJh7b119SdLy5RhWP5Cg
+    virtual-host: ycjhbtfr
+  # Configuración de la base de datos
+  datasource:
+    type: org.postgresql.jdbc2.optional.SimpleDataSource
+    username: ${USERNAME_DB:postgres}
+    password: ${PASSWORD_DB:password}
+    url: ${URL_DB:jdbc:postgresql://localhost:5432/storyverse}
+  jpa:
+    hibernate:
+      ddl-auto: update
+      # Para crear una entidad si es que no existe en la bd
+
+  # Configuración de zipkin
+  zipkin:
+    base-url: ${URL_ZIPKIN:http://localhost:9411/}
+
+# Configuración de keycloak
+keycloak:
+  auth-server-url: ${URL_KEYCLOAK:http://localhost:8080}
+  autodetect-bearer-only: true
+  realm: ${REALM_KEYCLOAK:software}
+  resource: backend
+  credentials:
+    secret: ${CREDENTIALS_SECRET_KEYCLOAK:sJfdWcUkRXjnGHvkkRZ6q5ejibUEcPY7}
+  ssl-required: external
+  use-resource-role-mappings: false
+  security-constraints:
+    - auth-roles:
+        - USER
+      security-collections:
+        - name: SERVICIOS DEL USER
+          patterns:
+            - /api/v1/story
+            - /api/v1/story/new
+            - /api/v1/story/chapter/new
+            - /api/v1/story/tags
+            - /api/v1/story/chapter/comment/new
+            - /api/v1/story/library
+            - /api/v1/story/chapter
+            - /api/v1/story/chapter/comment
+
+# Configuración del eureka
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${URL_EUREKA:http://localhost:8723/eureka/}
+    enabled: true
+
+# Configuracion de Resilience4j
+resilience4j:
+  # circuitbreaker
+  circuitbreaker:
+    instances:
+      storyCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 4
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+      chapterCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 4
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+      commentCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 4
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+      libraryCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 4
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+  # rateLimiter
+  ratelimiter:
+    instances:
+      storyRL:
+        registerHealthIndicator: true
+        limitForPeriod: 10 # Límite máximo de llamadas permitidas en el período
+        limitRefreshPeriod: 1s # Período de tiempo en el que se reinicia el contador (entre consultas)
+        timeoutDuration: 100ms # Tiempo de espera para obtener una respuesta/permiso
+      chapterRL:
+        registerHealthIndicator: true
+        limitForPeriod: 10
+        limitRefreshPeriod: 1s
+        timeoutDuration: 100ms
+      commentRL:
+        registerHealthIndicator: true
+        limitForPeriod: 10
+        limitRefreshPeriod: 1s
+        timeoutDuration: 100ms
+      libraryRL:
+        registerHealthIndicator: true
+        limitForPeriod: 10
+        limitRefreshPeriod: 1s
+        timeoutDuration: 100ms
+  # retry
+  retry:
+    instances:
+      storyRT:
+        max-attempts: 5 # Número máximo de intentos de reintento
+        waitDuration: 500ms # Duración de espera entre cada reintento
+      chapterRT:
+        max-attempts: 5
+        waitDuration: 500ms
+      commentRT:
+        max-attempts: 5
+        waitDuration: 500ms
+      libraryRT:
+        max-attempts: 5
+        waitDuration: 500ms
+  # bulkhead
+  bulkhead:
+    instances:
+      storyBH:
+        maxWaitDuration: 1000ms #Duración máxima que una llamada esperará en la cola de Bulkhead antes de lanzar una excepción
+        maxConcurrentCalls: 2 #Determina la cantidad mínima de subprocesos en funcionamiento
+      chapterBH:
+        maxWaitDuration: 1000ms
+        maxConcurrentCalls: 2
+      commentBH:
+        maxWaitDuration: 1000ms
+        maxConcurrentCalls: 2
+      libraryBH:
+          maxWaitDuration: 1000ms
+          maxConcurrentCalls: 2
+
+  thread-pool-bulkhead:
+    instances:
+      storyBH:
+        maxThreadPoolSize: 1 #Tamaño máximo del grupo de subprocesos
+        coreThreadPoolSize: 1 #Tamaño mínimo del grupo de subprocesos, al menos un subproceso disponible en el grupo
+        queueCapacity: 1 #Capacidad de la cola de espera
+      chapterBH:
+        maxThreadPoolSize: 1
+        coreThreadPoolSize: 1
+        queueCapacity: 1
+      commentBH:
+        maxThreadPoolSize: 1
+        coreThreadPoolSize: 1
+      libraryBH:
+        maxThreadPoolSize: 1
+        coreThreadPoolSize: 1
+        queueCapacity: 1
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+      group:
+        circuit-breakers:
+          include: "*"
+        rate-limiters:
+          include: "*"
+        retries:
+          include: "*"

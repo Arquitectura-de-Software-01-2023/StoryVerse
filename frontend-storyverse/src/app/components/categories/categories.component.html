@@ -1,0 +1,31 @@
+<app-navbar *ngIf="logged; else invitado"></app-navbar>
+<ng-template #invitado>
+    <app-navbarinvited></app-navbarinvited>
+</ng-template>
+<div id="categories-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Categorías</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="categories">
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let category of categories">
+                            <div class="category" [routerLink]="['/category-result', category.id]">
+                                <div class="category-name">
+                                    <a>{{category.name}}</a>
+                                </div>
+                                <div class="category-image">
+                                    <img src="{{category.image}}" alt="category.name" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

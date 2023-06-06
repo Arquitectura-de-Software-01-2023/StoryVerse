@@ -1,0 +1,61 @@
+#categories-container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-image: radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(150px 150px at 90% 23%, #D26DFF9C 53%, #073AFF00 100%),radial-gradient(100px 100px at 40% 23%, #ff88009a 7%, #073AFF00 97%),radial-gradient(250px 250px at 10% 80%, #f78cd1b7 72%, #073AFF00 100%),radial-gradient(200px 200px at 60% 80%, #5EF9C6BA 44%, #2F4F3200 86%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.category{
+    padding: 10px 5px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #F5F5F5;
+    border-radius: 18px;
+    height: 100px;
+    margin-bottom: 40px;
+    width: 300px;
+    position: relative;
+    background-color: #FAFAFA;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    text-decoration: none;
+}
+
+.category-name{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.category-name a{
+    text-decoration: none;
+    color: #6b6b6b;
+    font-size: 18px;
+}
+
+.category-image{
+    width: 90px;
+    height: 90px;
+}
+
+.category:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 2.5px solid #B4C8C1;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: #B08AB7;
+}

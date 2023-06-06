@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="library"> 
+    <div>
+        <h2>Biblioteca</h2>
+        <hr>
+    </div>
+    <h3>Lista de lecturas</h3>
+    <hr>
+    <div style="display: flex; align-items: center; justify-content: end; margin-bottom: 20px;">
+        <i class="fa-solid {{library_private ? 'fa-lock-keyhole-open' : 'fa-lock-keyhole'}}" style="font-size: 14px; color: #957eb3;"></i>
+        <p style="font-size: 14px; padding-top: 3px; padding-left: 5px; padding-right: 0; color: #957eb3; font-weight: bold;">Privado</p>
+    </div>
+    <div class="story-library">
+        <div class="story" *ngFor="let story of storiesLibrary">
+            <div class="story-image" style="position: relative; display: inline-block;">
+                <div class="delete-btn" (click)="deleteStory(story.storyId)">
+                    <i class="fa-solid fa-trash-can" style="font-size: 18px; color: white; padding: 8px;"></i>
+                </div>
+                <a (click)="refresh(story.storyId)" [routerLink]="['/viewstory', story.storyId]">
+                    <img class="sombra" src="{{story.urlCover}}" alt="{{story.title}}" width="100%">
+                </a>
+            </div>
+            <a (click)="refresh(story.storyId)" [routerLink]="['/viewstory', story.storyId]">
+                <div class="story-info">
+                    <div class="title texto-largo">{{story.title}}</div>
+                    <div style="display: flex; align-items: center;">
+                        <i class="fa-solid fa-star" style="font-size: 14px; color: #635d6c;"></i>
+                        <p style="font-size: 12px; padding-left: 10px; color: #635d6c;">{{story.votes}}</p>
+                        <i class="fa-solid fa-list" style="font-size: 14px; color: #635d6c;"></i>
+                        <p style="font-size: 12px; padding-left: 10px; color: #635d6c;">{{story.cantChapters}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>        
+    </div>    
+</div>
+<div style="position: fixed; bottom: 20px; right: 30px;">
+    <h4 style="font-size: 15px; font-family: 'Montserrat', sans-serif;">@StoryVerse</h4>
+</div>

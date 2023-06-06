@@ -1,0 +1,8 @@
+### Agregar un libro a la biblioteca
+POST http://localhost:8111/api/v1/story/library?userId=Abcd1234&storyId=1
+
+### Obtener la biblioteca de un usuario
+GET http://localhost:8111/api/v1/story/library?userId=Abcd1234
+
+### Eliminar un libro de la biblioteca
+DELETE http://localhost:8111/api/v1/story/library?userId=Abcd1234&storyId=1

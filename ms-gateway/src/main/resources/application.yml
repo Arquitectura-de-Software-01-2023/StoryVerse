@@ -1,0 +1,60 @@
+# Configura el puerto en el que el servidor estará escuchando
+server:
+  port: 8111
+
+# Configuración de la aplicación Spring
+spring:
+  # Establece el nombre de la aplicación
+  application:
+    name: ms-gateway
+  # Configura el uso de Spring Cloud Gateway
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      global-cors:
+        cors-configurations:
+          '[/**]':
+            allowedHeaders:
+              - "Origin"
+              - "Content-Type"
+              - "Accept"
+              - "Authorization"
+              - "Content-Length"
+              - "X-Requested-With"
+            allowedOrigins:
+              - "http://localhost:4200"
+            allowedMethods:
+              - "GET"
+              - "POST"
+              - "PUT"
+              - "DELETE"
+              - "OPTIONS"
+
+      routes:
+        - id: ms-story
+          uri: lb://ms-story
+          predicates:
+            - Path=/historias/**
+          filters:
+            - RewritePath=/historias/(?<path>.*), /$\{path}
+        - id: ms-user
+          uri: lb://ms-user
+          predicates:
+            - Path=/usuarios/**
+          filters:
+            - RewritePath=/usuarios/(?<path>.*), /$\{path}
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8723/eureka/
+    enabled: true

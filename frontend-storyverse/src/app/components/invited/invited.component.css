@@ -1,0 +1,134 @@
+.titulo {
+    color: #ba9edfcb;
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 50px;
+}
+.main{
+    background-image: radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(300px 300px at 72% 23%, #D26DFF9C 53%, #073AFF00 100%),radial-gradient(100px 100px at 40% 23%, #FF88009C 7%, #073AFF00 97%),radial-gradient(350px 350px at 10% 80%, #f78cd1b7 72%, #073AFF00 100%),radial-gradient(200px 200px at 60% 80%, #5EF9C6BA 44%, #2F4F3200 86%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.description{
+    font-size: 20px;
+    margin-top: 10px;
+    width: 400px;
+}
+
+.description-box{
+    padding: 20px 50px;
+    width: 300px;
+    text-align: center;
+}
+
+.description-boxes{
+    display: flex;
+    justify-content: space-around;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: inherit;
+}
+
+.box{
+    content: "";
+    width: 300px;
+    height: 200px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    background: inherit;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.box img{
+    margin-top: 10px;
+}
+.box:hover{
+    transform: scale(1.1);
+    pointer-events: painted;
+    background-color: #c7bad8; 
+    cursor: pointer;
+    box-shadow: inset 0 0 2000px rgba(235, 235, 235, 0.5);
+    background: inherit;
+    transition: all 0.5s ease-in-out;
+
+}
+
+#title-historia{
+    color: #5c5c5c;
+    font-weight: 700;
+    margin: 50px 0px;
+    font-size: 50px;
+    text-align: center;
+
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 0px 50px 0px;
+    margin: 0;
+}
+
+
+#kc-login, #kc-register-button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+
+}
+
+#kc-login:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 2000px rgba(235, 235, 235, 0.5);
+    transition: all 0.5s;
+    
+    
+
+}
+#kc-login{
+    background: linear-gradient(90deg, #e994e5d7 0%, #9655cfcb 100%);
+    transition: all 0.5s;
+    
+     
+}
+.kcButtonClass {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+}
+
+#kc-form-buttons {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.login100-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: #c194e9;
+    top: 0;
+    left: -100%;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}

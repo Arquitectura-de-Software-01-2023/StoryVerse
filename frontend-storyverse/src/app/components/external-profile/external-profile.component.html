@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+<div class="profile">
+    <div style="background-image: url({{user.url_header}}); background-size: cover; background-position: center; color: white;">
+        <div class="center" style="padding-top: 45px;">
+            <img src="{{user.url_pfp}}" alt="Foto de perfíl" width="200px" style="border-radius: 100%; height: 200px;">
+        </div>
+        <div class="center" style="margin: 15px;">
+            <h1>{{user.preferred_username}}</h1>
+        </div>
+        <div class="center" style="padding-bottom: 45px;">
+            <div>
+                <h4 class="center">{{cantStories}}</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <div>
+                <h4 class="center">{{libraryStories}}</h4>
+                <p>Biblioteca</p>
+            </div>
+            <div>
+                <a href="{{user.preferred_username}}/followers">
+                    <h4 class="center">{{following}}</h4>
+                    <p>Seguidores</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light espacio" style="padding: 0; padding-top: 8px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" style="padding-right: 60px;" href="{{user.preferred_username}}/profile">Acerca de<span class="sr-only">(current)</span></a>
+                    <hr style="border-width: 2.5px; background-color: #c7bad8;">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="padding-right: 60px;" href="{{user.preferred_username}}/announcement">Anuncios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="padding-right: 60px;" href="{{user.preferred_username}}/following">Siguiendo</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <!-- ngIf para cambiar el boton dependiendo si el usuario sigue o no a otro usuario -->
+                    <button *ngIf="siguiendo" class="btn btn-outline-info" (click)="dejarDeSeguir()" style="margin-right: 10px; margin-left: 10px;">
+                        <i class="fa-solid fa-user-minus" style="font-size: 12px; color:#c7bad8;"></i>&nbsp;
+                        Dejar de seguir
+                    </button>
+                    <button *ngIf="!siguiendo" class="btn btn-outline-info" (click)="seguir()" style="margin-right: 10px; margin-left: 10px;">
+                        <i class="fa-solid fa-user-plus" style="font-size: 12px; color:#c7bad8;"></i>&nbsp;
+                        Seguir
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr class="espacio">
+    <div class="decript-stories espacio">
+        <div class="description sombra">
+            <p>{{user.description}}</p>
+        </div>
+        <div class="stories sombra">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="display: block;">
+                    <h4 style="font-weight: bold;">Historias escritas por {{user.preferred_username}}</h4>
+                    <p style="padding: 0;">Tiene {{cantStories}} historias publicadas</p>
+                </div>
+            </div>
+            <div class="own-stories" style="margin-top: 15px;">
+                <div class="story" *ngFor="let story of stories" style="display: flex; cursor: pointer;" [routerLink]="['/viewstory', story.storyId]">
+                    <img class="sombra" src="{{story.urlCover}}" alt="Portada {{story.title}}" width="30%" style="height: 250px; margin-right: 25px;">
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <h4 style="font-weight: bold;">{{story.title}}</h4>
+                        <div style="display: flex; align-items: center; margin: 8px 0;">
+                            <i class="fa-solid fa-star" style="font-size: 14px; color: #635d6c;"></i>
+                            <p style="font-size: 12px; padding-left: 10px; color: #635d6c;">{{story.votes}}</p>
+                            <i class="fa-solid fa-list" style="font-size: 14px; color: #635d6c;"></i>
+                            <p style="font-size: 12px; padding-left: 10px; color: #635d6c;">{{story.cantChapters}}</p>
+                        </div>
+                        <p style="padding: 0; font-size: 12px;">{{story.description}}</p>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: end; padding-bottom: 25px; padding-right: 25px;">
+        <h4 style="font-size: 15px;">@StoryVerse</h4>
+    </div>
+</div>

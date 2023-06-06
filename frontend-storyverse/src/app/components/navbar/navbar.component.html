@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand">
+        <h2 style="color: #c7bad8; margin-bottom: 6px;">storyverse</h2>
+        <div class="logo"><h2 style="color: white; margin-bottom: 6px;">sv.</h2></div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item option"><a class="nav-link" routerLink="/home">Inicio</a></li>
+            <li class="nav-item option"><a class="nav-link" routerLink="/categories">Explorador</a></li>
+            <div class="center option">
+                <input class="buscar" type="search" placeholder="Buscar título" [(ngModel)]="inputSearchTitle">
+                <i class="fa-solid fa-magnifying-glass icon-buscar" [routerLink]="['/search', inputSearchTitle]"></i>
+            </div>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="{{urlPfp}}" width="35px" style="border-radius: 100%; height: 35px;">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item plomo" routerLink="/profile">Mi perfil</a>
+                    <hr>
+                    <a class="dropdown-item plomo" href="/library">Biblioteca</a>
+                    <a class="dropdown-item plomo" href="/notificaciones">Notificaciones</a>
+                    <hr>
+                    <a class="dropdown-item plomo" href="/settings">Ajustes</a>
+                    <button class="dropdown-item plomo" (click)="logout()">Cerrar sesión</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<hr class="line">
+<!--Iconos-->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" integrity="tu-clave-de-api" crossorigin="anonymous">

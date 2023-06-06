@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*---------------------------------------------*/
+a {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #a64bf4;
+
+}
+
+/*---------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+}
+
+ul,
+li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+/*---------------------------------------------*/
+input {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    outline: none;
+    border: none;
+}
+
+textarea:focus,
+input:focus {
+    border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+    color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+input::-webkit-input-placeholder {
+    color: #adadad;
+}
+
+input:-moz-placeholder {
+    color: #adadad;
+}
+
+input::-moz-placeholder {
+    color: #adadad;
+}
+
+input:-ms-input-placeholder {
+    color: #adadad;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #adadad;
+}
+
+textarea:-moz-placeholder {
+    color: #adadad;
+}
+
+textarea::-moz-placeholder {
+    color: #adadad;
+}
+
+textarea:-ms-input-placeholder {
+    color: #adadad;
+}
+
+/* Login Button */
+/*---------------------------------------------*/
+#kc-login, #kc-register-button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+
+}
+
+#kc-login:hover, #kc-register-button:hover {
+    cursor: pointer;
+}
+
+
+.kcButtonClass {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+}
+
+#kc-form-buttons {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.login100-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: #a64bf4;
+    /* background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: -o-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: -moz-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff); */
+    background: -webkit-linear-gradient(right, #efd5ff, #515ada, #efd5ff, #515ada);
+    background: -o-linear-gradient(right, #efd5ff, #515ada, #efd5ff, #515ada);
+    background: -moz-linear-gradient(right, #efd5ff, #515ada, #efd5ff, #515ada);
+    background: linear-gradient(right, #efd5ff, #515ada, #efd5ff, #515ada);
+    top: 0;
+    left: -100%;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+#kc-form-buttons:hover .login100-form-bgbtn {
+    left: 0;
+}
+
+/* Elementos del form */
+/* ------------------------------------------------ */
+.kcFormGroupClass {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #d9d9d9;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+
+/* Titulos, label, input */
+/*---------------------------------------------*/
+.login100-form-title {
+    display: block;
+    font-weight: 700;
+    font-size: 28px;
+    color: #3d3d3d;
+    line-height: 1.2;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+}
+
+.label-input100 {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.5;
+    padding-left: 7px;
+}
+
+#username,
+#password,
+#email,
+#user\.attributes\.birthdate,
+#password-confirm {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    padding: 0 7px 0 43px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input100::after {
+    content: attr(data-symbol);
+    font-family: Material-Design-Iconic-Font;
+    color: #adadad;
+    font-size: 22px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: calc(100% - 20px);
+    bottom: 0;
+    left: 0;
+    padding-left: 13px;
+    padding-top: 3px;
+}
+
+.focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #7f7f7f;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.kcInputClass:focus+.focus-input100::before {
+    width: 100%;
+}
+
+.has-val.kcInputClass+.focus-input100::before {
+    width: 100%;
+}
+
+.kcInputClass:focus+.focus-input100::after {
+    color: #7377e4;
+}
+
+#kc-content {
+    background-image: url('../img/bg-01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kc-registration-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+#kc-header-wrapper {
+    display: none;
+}
+
+/* Login Card */
+
+#kc-content-wrapper {
+    width: 500px;
+    min-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 50px 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#kc-social-providers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#kc-social-providers span {
+    color: #666666;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.kcFormSocialAccountListButtonClass {
+    font-size: 25px;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #000000;
+}
+
+.kcFormSocialAccountListButtonClass:hover {
+    color: #fff;
+    background-color: #333333;
+}
+
+.kcFormSocialAccountListButtonClass span {
+    display: none;
+}
+
+/* logo */
+.logo {
+    padding: 0px 4px;
+    border-radius: 100%;
+    background-color: #c7bad8;
+    margin-left: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 13px;
+    font-family: 'Fredoka', cursive;
+}
+
+.logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 auto; */
+    text-align: center;
+    /* margin-top: -20px; */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -20px;
+}
+
+
+/* Register */
+.return-link{
+    margin-bottom: 20px;
+}
+
+/* eye */
+#eye, #eye-confirm {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #adadad;
+    font-size: 22px;
+    z-index: 999;
+}

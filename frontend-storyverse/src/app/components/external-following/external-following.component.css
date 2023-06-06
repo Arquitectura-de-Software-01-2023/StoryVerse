@@ -1,0 +1,56 @@
+.profile {
+    font-family: 'Montserrat', sans-serif;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 100;
+}
+h4 {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+p {
+    margin-bottom: 0;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 100;
+}
+a {
+    color: #ffffff;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+.nav-link {
+    font-weight: bold;
+}
+.espacio {
+    margin: 0 10%;
+}
+hr {
+    margin: 0;
+}
+/*Annuncios*/
+.unfollow-btn {
+    padding: 5px 15px;
+    color: white;
+    border-radius: 10px;
+    background-color: #00b2b2;
+    font-size: 12px;
+    gap: 5px;
+}
+.unfollow-btn:hover {
+    background-color: #009899;
+}
+.sombra {
+    border-radius: 10px;
+    border: #e2e2e2 solid 1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

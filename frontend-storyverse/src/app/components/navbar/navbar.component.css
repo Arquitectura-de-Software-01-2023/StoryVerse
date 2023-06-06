@@ -1,0 +1,79 @@
+/*Características generales*/
+* {
+    margin-left: 3px;
+    margin-right: 1px;
+    margin-top: 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+/*Navbar - detalles*/
+h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+}
+.logo {
+    padding: 0px 4px;
+    border-radius: 100%;
+    background-color: #c7bad8;
+    margin-left: 15px;
+}
+li, .navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li a img {
+    margin-right: 5px;
+}
+.option {
+    padding-left: 65px !important;
+}
+hr {
+    margin: 5px 10px;
+}
+.line {
+    margin: 0 25px;
+}
+.dropdown-item {
+    color: rgba(0,0,0,.5);
+}
+.dropdown-item:hover {
+    color: black
+}
+.plomo:active {
+    background-color: #c7bad8;
+    color: white;
+}
+/*Buscador*/
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buscar {
+    border: 1px solid #c7bad8;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+    font-weight: 200;
+    margin: 0;
+    font-size: 15px;
+}
+.icon-buscar {
+    margin: 0;
+    background-color: #c7bad8;
+    border-radius: 0 10px 10px 0;
+    border: 0 solid #c7bad8;
+    border-left: none;
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+}
+.icon-buscar:hover {
+    color: #c7bad8;
+    background-color: white;
+    border: 1px solid #c7bad8;
+    border-left: none;
+}

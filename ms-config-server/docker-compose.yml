@@ -1,0 +1,16 @@
+version: '2.4'
+networks:
+  pocketnet:
+    name: network-database
+    driver: bridge
+services:
+  ms-config-server:
+    image: ms-config-server:0.0.1
+    restart: always
+    mem_limit: 400m
+    ports:
+      - "8888:8888"
+    networks:
+      - pocketnet
+    volumes:
+      - C:/logs/ms-config-server:/logs

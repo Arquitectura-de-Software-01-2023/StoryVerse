@@ -1,0 +1,58 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+    margin: 1px 1px 6px 3px;
+}
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 30px 15% 25px 15%;
+}
+.logo {
+    padding: 0px 4px;
+    border-radius: 100%;
+    background-color: #c7bad8;
+    margin-left: 15px;
+}
+.buttons {
+    height: 74px;
+    padding: 0 24px;
+}
+.boton {
+    outline: none;
+    border: 0 !important;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    padding: 4px 20px;
+    margin-left: 15px;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chapterTitle {
+    font-size: 18px;
+    border: 0;
+    border-bottom: #c7bad8 1px solid;
+    text-align: center;
+    outline: none;
+    width: 50%;
+    margin-bottom: 25px;
+}
+.chapterContent {
+    font-size: 14px;
+    border: #c7bad8 1px solid;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}

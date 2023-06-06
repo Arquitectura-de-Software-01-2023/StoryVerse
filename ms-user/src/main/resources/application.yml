@@ -1,0 +1,159 @@
+server:
+  port: 8008
+spring:
+  rabbitmq:
+    host: sparrow-01.rmq.cloudamqp.com
+    port: 5672
+    username: ycjhbtfr
+    password: NEpxuzzhJCmOxJh7b119SdLy5RhWP5Cg
+    virtual-host: ycjhbtfr
+  application:
+    name: ms-user
+  datasource:
+    type: org.postgresql.jdbc2.optional.SimpleDataSource
+    username: ${USERNAME_DB:postgres}
+    password: ${PASSWORD_DB:password}
+    url: ${URL_DB:jdbc:postgresql://127.0.1.1:5432/storyverse}
+  jpa:
+    hibernate:
+      ddl-auto: update
+      # Para crear una entidad si es que no existe en la bd
+
+  # Configuración de zipkin
+  zipkin:
+    base-url: ${URL_ZIPKIN:http://localhost:9411/}
+
+#Configuramos springboot con keycloak
+keycloak:
+  realm: ${REALM_KEYCLOAK:software}
+  auth-server-url:  ${URL_KEYCLOAK:http://localhost:8080}
+  ssl-required: external
+  resource: ${CLIENT_KEYCLOAK:backend}
+  credentials:
+    secret: ${CREDENTIALS_SECRET_KEYCLOAK:YBdX3Ao5RH0SLtMubBHx2GjcoPKOUpwK}
+  use-resource-role-mappings: false
+  security-constraints:
+    - auth-roles:
+        - USER
+      security-collections:
+        - name: SERVICIOS DEL USER
+          patterns:
+            - /api/v1/user/follow
+            - /api/v1/user/unfollow
+            - /api/v1/user/announce
+            - /api/v1/user/
+
+#Conexion con discovery
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${URL_EUREKA:http://localhost:8723/eureka/}
+    enabled: true
+
+# Configuracion de Resilience4j
+resilience4j:
+  # circuit breaker
+  circuit-breaker:
+    instances:
+      userCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 4
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+      followerCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 4
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+      announcementCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 4
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+
+  rate-limiter:
+    instances:
+      userRL:
+        registerHealthIndicator: true
+        limitForPeriod: 5 # Límite máximo de llamadas permitidas en el período
+        limitRefreshPeriod: 1s # Período de tiempo en el que se permite el número máximo de llamadas
+        timeoutDuration: 1s # Tiempo de espera para adquirir una respuesta/permiso
+      followerRL:
+        registerHealthIndicator: true
+        limitForPeriod: 5
+        limitRefreshPeriod: 1s
+        timeoutDuration: 1s
+      announcementRL:
+        registerHealthIndicator: true
+        limitForPeriod: 5
+        limitRefreshPeriod: 1s
+        timeoutDuration: 1s
+  
+  bulkhead:
+    instances:
+      userBH:
+        maxWaitDuration: 1000ms #Duración máxima que una llamada esperará en la cola de Bulkhead antes de lanzar una excepción
+        maxConcurrentCalls: 2 #Determina la cantidad mínima de subprocesos en funcionamiento
+      followerBH:
+        maxWaitDuration: 1000ms
+        maxConcurrentCalls: 2
+      announcementBH:
+        maxWaitDuration: 1000ms
+        maxConcurrentCalls: 2
+
+  thread-pool-bulkhead:
+    instances:
+      userBH:
+        maxThreadPoolSize: 1 #Tamaño máximo del grupo de subprocesos
+        coreThreadPoolSize: 1 #Tamaño mínimo del grupo de subprocesos, al menos un subproceso disponible en el grupo
+        queueCapacity: 1 #Capacidad de la cola de espera
+      followerBH:
+        maxThreadPoolSize: 1
+        coreThreadPoolSize: 1
+        queueCapacity: 1
+      announcementBH:
+        maxThreadPoolSize: 1
+        coreThreadPoolSize: 1
+
+  retry:
+    instances:
+      userRT:
+        maxAttempts: 5 # Número máximo de intentos de reintentos
+        waitDuration: 1s # Tiempo de espera entre reintentos
+      followerRT:
+        maxAttempts: 5
+        waitDuration: 1s
+      announcementRT:
+        maxAttempts: 5
+        waitDuration: 1s
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+      group:
+        circuit-breakers:
+          include: "*"
+        rate-limiters:
+          include: "*"
+        retries:
+          include: "*"

@@ -1,0 +1,70 @@
+.profile {
+    font-family: 'Montserrat', sans-serif;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 100;
+}
+h4 {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+p {
+    margin-bottom: 0;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 100;
+}
+a {
+    color: #ffffff;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+.nav-link {
+    font-weight: bold;
+}
+.espacio {
+    margin: 0 10%;
+}
+hr {
+    margin: 0;
+}
+/*Descripción - historias*/
+.decript-stories {
+    display: grid;
+    grid-template-columns: 35% 60%;
+    gap: 5%;
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+.sombra {
+    border-radius: 10px;
+}
+.description {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 300px;
+    max-height: 300px;
+    box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.1);
+}
+.stories {
+    padding: 20px;
+    box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.1);
+}
+.story {
+    padding: 20px 30px;
+}
+.setting-icon {
+    font-size: 40px;
+    color: #6f6f6f;
+}
+.setting-icon:hover {
+    color: #4c4c4c;
+}

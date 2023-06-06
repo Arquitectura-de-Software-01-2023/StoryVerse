@@ -1,0 +1,16 @@
+2023-05-18 10:13:02,365 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-05-18 10:13:02,448 INFO org.springframework.boot.StartupInfoLogger [main] Starting MsConfigServerApplicationKt using Java 11.0.12 on DESKTOP-H64KQLT with PID 12980 (C:\Users\micae\OneDrive\Escritorio\Backend\discovery-gateway-serverconfig\Software-Proyecto\ms-config-server\target\classes started by micae in C:\Users\micae\OneDrive\Escritorio\Backend\discovery-gateway-serverconfig\Software-Proyecto\ms-config-server)
+2023-05-18 10:13:02,463 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-18 10:13:07,136 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=5b42edef-8bf5-3e7d-a719-2c20f48f08ca
+2023-05-18 10:13:10,022 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8888 (http)
+2023-05-18 10:13:10,058 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8888"]
+2023-05-18 10:13:10,065 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-05-18 10:13:10,069 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-05-18 10:13:10,999 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-05-18 10:13:11,033 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 8347 ms
+2023-05-18 10:13:18,261 INFO org.apache.sshd.common.util.security.AbstractSecurityProviderRegistrar [main] getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2023-05-18 10:13:18,275 INFO org.apache.sshd.common.util.security.AbstractSecurityProviderRegistrar [main] getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2023-05-18 10:13:22,033 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-18 10:13:22,151 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8888"]
+2023-05-18 10:13:22,280 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-18 10:13:24,119 INFO org.springframework.boot.StartupInfoLogger [main] Started MsConfigServerApplicationKt in 27.281 seconds (JVM running for 28.494)

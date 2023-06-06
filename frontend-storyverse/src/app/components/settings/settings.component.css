@@ -1,0 +1,95 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+.espacio {
+    margin: 0 20%;
+}
+.config-link {
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 10 !important;
+    padding-right: 90px !important;
+    padding-bottom: 10px !important;
+}
+hr {
+    margin: 0;
+}
+.formulario {
+    margin: 20px 30%;
+    padding: 5px 28px 20px 28px;
+    background-color: #efece8;
+    border-radius: 10px;
+}
+.form-label {
+    margin-top: 10px;
+    margin-bottom: 5px !important;
+    font-size: 16px;
+}
+.inputs {
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    width: 100%;
+    color: #635d6c;
+    font-size: 15px;
+}
+.no-style {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    border: 0 !important;
+}
+.no-style:hover {
+    text-decoration: underline !important;
+}
+.no-style:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn {
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:focus, .btn:hover {
+    outline: none;
+    box-shadow: none;
+    background-color: #efece8;
+}
+
+/*Checkbox*/
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+.custom-checkbox + label {
+    cursor: pointer;
+    text-decoration: none;
+}
+.custom-checkbox + label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #c7bad8;
+    background-color: #fff;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.custom-checkbox:checked + label:before {
+    background-color: #c7bad8;
+}
+.custom-checkbox:checked + label:before {
+    content: "\2713"; /* Código de caracter Unicode del icono de check */
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+}

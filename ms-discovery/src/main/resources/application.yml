@@ -1,0 +1,12 @@
+server:
+   port: 8723
+
+spring:
+  application:
+    name: ms-discovery
+
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://ms-discovery:8723/eureka/

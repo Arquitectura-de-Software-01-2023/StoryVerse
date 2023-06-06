@@ -1,0 +1,18 @@
+### Publicar un comentario - crear - POST
+POST http://localhost:8111/api/v1/story/chapter/comment/new
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": "abiahsjahd",
+  "chapterId": 1,
+  "description": "Comentario de prueba",
+  "date": "2020-05-05T00:00:00.000Z",
+  "status": true
+}
+
+### Obtener todos los comentarios - mediante el chapterId
+GET http://localhost:8111/api/v1/story/chapter/1/comment/list
+
+### Eliminar un comentario - mediante el id - DELETE
+DELETE http://localhost:8111/api/v1/story/chapter/comment?commentId=1

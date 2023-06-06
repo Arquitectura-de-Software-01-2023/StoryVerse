@@ -1,0 +1,80 @@
+.library {
+    margin: 0;
+    padding: 0 8%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+    font-size: 25px;
+    margin: 20px 0;
+}
+h3 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+h4 {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.title {
+    color: #957eb3;
+    font-weight: bold;
+    font-size: 18px;
+}
+p {
+    margin-bottom: 0;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 100;
+}
+/* Card */
+.story-library {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 4%;
+}
+.story-library .story {
+    width: 16.8%;
+    margin-bottom: 25px;
+}
+.sombra {
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45vh;
+}
+.delete-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border-radius: 100%;
+    background-color: #c7bad8;
+}
+.delete-btn:hover {
+    background-color: #957eb3;
+}
+.story-info {
+    padding: 10px 2px;
+}
+.info {
+    display: flex;
+    align-items: center;
+}
+.texto-largo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+/*Transición*/
+.story:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+}

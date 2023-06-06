@@ -1,0 +1,83 @@
+### Publicar una historia - crear - POST
+POST http://localhost:8111/api/v1/story/new
+Accept: application/json
+Content-Type: application/json
+
+{
+  "writerId": 5,
+  "categoryId": 1,
+  "title": "Test",
+  "urlCover": "Imagen 1",
+  "description": "Mejor historia",
+  "audience": "Audience 5",
+  "language": "Español",
+  "publicationDate": "2021-03-01",
+  "votes": 0,
+  "status": true
+}
+
+### Obtener lista de historias - que no hayan sido escritas por el user 1
+GET  http://localhost:8111/api/v1/story/list?writerId=1&page=0&size=10
+
+### Obtener lista de historias - que hayan sido escritas por el user 1
+GET http://localhost:8111/api/v1/story/list/yours?writerId=1&page=0&size=10
+
+### Obtener lista de historias mediante el titulo
+GET http://localhost:8111/api/v1/story/list/title?title=Prueba&page=0&size=10
+
+### Obtener lista de historias mediante el id de la categoria
+GET http://localhost:8111/api/v1/story/list/category?categoryId=2&page=0&size=10
+
+### Obtener los datos de una historia mediantes su id
+GET http://localhost:8111/api/v1/story?storyId=7
+
+### Actualizar una historia - PUT
+PUT http://localhost:8111/api/v1/story
+Accept: application/json
+Content-Type: application/json
+
+{
+  "storyId": 6,
+  "writerId": 1,
+  "categoryId": 2,
+  "title": "Prueba tres",
+  "urlCover": "Imagen 1",
+  "description": "Descripción historia 1",
+  "audience": "Audience 5",
+  "language": "Español",
+  "publicationDate": "2021-03-01",
+  "votes": 0,
+  "status": true
+}
+
+### Aumentar el número de votos de una historia
+PUT http://localhost:8111/api/v1/story/vote?storyId=1
+
+### Eliminar una historia - eliminación lógica - DELETE
+DELETE http://localhost:8111/api/v1/story?storyId=6
+
+### Obtener la lista de categorías
+GET http://localhost:8111/api/v1/story/category/list
+
+### Obtener el writerId de un usuario
+GET http://localhost:8111/api/v1/story/writerId?userId=Ebcde-ansjdahjdhaskj-asnkdjakhdkjsah
+
+### Eliminar a un escritor - eliminación lógica - DELETE
+DELETE http://localhost:8111/api/v1/story/writer?userId=Ebcde
+
+### Creacion de tags para una historia - POST
+POST http://localhost:8111/api/v1/story/tags?storyId=5
+Accept: application/json
+Content-Type: application/json
+
+["Romance", "Drama", "Comedia", "Terror"]
+
+### Obtener la lista de tags de una historia
+GET http://localhost:8111/api/v1/story/tags?storyId=5
+
+### Actualizacion de tags para una historia - PUT
+PUT http://localhost:8111/api/v1/story/tags?storyId=5
+Accept: application/json
+Content-Type: application/json
+
+["Amor", "Drama", "Comedia"]

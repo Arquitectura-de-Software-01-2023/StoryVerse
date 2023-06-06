@@ -1,0 +1,26 @@
+<div class="buttons" style="display: flex; justify-content: space-between;">
+    <div class="center">
+        <h2 style="color: #c7bad8;">storyverse</h2>
+        <div class="logo">
+            <h2 style="color: white;">
+                sv.
+            </h2>
+        </div>
+    </div>
+    <div class="center">
+        <button style="background-color: #f36062;" class="boton" [routerLink]="['/mystories']">Cancelar</button>
+        <button style="background-color: #7a79c5;" class="boton" (click)="eliminarCapitulo()">Borrar capitulo</button>
+        <button style="background-color: #83c579;" class="boton" (click)="saveChangesChapter()">Guardar cambios</button>
+    </div>
+</div>
+<hr style="margin: 0 25px;">
+<h3>Editar detalles del capítulo</h3>
+<div style="margin: 0 15%;">
+    <div class="center" style="width: 100%;">
+        <input class="chapterTitle" [(ngModel)]="inputTitle" placeholder="Título del capítulo">
+    </div>
+    <textarea style="resize: none;" rows="19" maxlength="10000" class="chapterContent" [(ngModel)]="txtAreaContent" placeholder="Contenido del capítulo"></textarea>
+</div>
+<div style="position: absolute; bottom: 15px; right: 35px;">
+    <h4 style="font-size: 15px;">@StoryVerse</h4>
+</div>

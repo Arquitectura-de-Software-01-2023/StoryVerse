@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<div class="profile">
+    <div style="background-image: url({{user.url_header}}); background-size: cover; background-position: center; color: white;">
+        <div class="center" style="padding-top: 45px;">
+            <img src="{{user.url_pfp}}" alt="Foto de perfíl" width="200px" style="border-radius: 100%; height: 200px;">
+        </div>
+        <div class="center" style="margin: 15px;">
+            <h1>{{user.preferred_username}}</h1>
+        </div>
+        <div class="center" style="padding-bottom: 45px;">
+            <div>
+                <h4 class="center">{{cantStories}}</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <div>
+                <h4 class="center">{{libraryStories}}</h4>
+                <p>Biblioteca</p>
+            </div>
+            <div>
+                <a href="{{user.preferred_username}}/followers">
+                    <h4 class="center">{{following}}</h4>
+                    <p>Seguidores</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light espacio" style="padding: 0; padding-top: 8px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="padding-right: 60px;" href="{{user.preferred_username}}/profile">Acerca de<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="padding-right: 60px;" href="{{user.preferred_username}}/announcement">Anuncios</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" style="padding-right: 60px;" href="{{user.preferred_username}}/following">Siguiendo</a>
+                    <hr style="border-width: 2.5px; background-color: #c7bad8;">
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr class="espacio">
+    <div class="espacio" style="margin: 25px 10%;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;">
+            <div class="sombra" *ngFor="let following of followings" [routerLink]="['/',following.preferred_username,'profile']" style="cursor: pointer;">
+                <div style="border-radius: 10px; background-image: url({{following.url_header}}); background-size: cover; background-position: center; flex-basis: calc(33% - 10px);">
+                    <div class="center" style="padding-top: 25px;">
+                        <img src="{{following.url_pfp}}" alt="Foto de perfíl" width="50px" style="border-radius: 50%; height: 50px;">
+                    </div>
+                    <div class="center" style="padding-top: 8px; padding-bottom: 20px; color: white;">
+                        <a href="{{following.preferred_username}}/profile"><h1 style="font-size: 18px;">{{following.preferred_username}}</h1></a>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </div>
+    <div style="display: flex; justify-content: end; padding-bottom: 25px; padding-right: 25px;">
+        <h4 style="font-size: 15px;">@StoryVerse</h4>
+    </div>
+</div>

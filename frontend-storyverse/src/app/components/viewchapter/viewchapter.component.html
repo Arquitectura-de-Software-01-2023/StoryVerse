@@ -1,0 +1,77 @@
+<app-navbar *ngIf="logged; else invitado"></app-navbar>
+<ng-template #invitado>
+    <app-navbarinvited></app-navbarinvited>
+</ng-template>
+<br>
+<!-- //<hr style="margin: 0 25px;"> -->
+<div style="margin: 0 25%;">
+    <div class="center" style="width: 100%;">
+        <h3 style="font-size: 30px; cursor:context-menu;">{{chapter.title}}</h3>
+    </div>
+    <hr>
+    <div class="chapterContent">{{chapter.description}}</div>
+    <br><br><br>
+    <hr>
+</div>
+<br>
+
+<div id="comment-button-container" *ngIf="logged">
+    <div class="sombra pfp-announcement comment-box">
+        <img [src]="logged ? user.url_pfp : urlPorDefecto" alt="Foto de perfíl" width="40px" style="border-radius: 100%; height: 40px;">
+        <div>
+            <textarea rows="4" maxlength="400" placeholder="Agrega un comentario" class="textarea chapterContent"
+                [(ngModel)]="ComentarioUser"></textarea>
+            <div style="display: flex; justify-content: end;">
+                <button class="purple-button" (click)="Publicar()">Publicar &nbsp;&nbsp; <i class="fa-regular fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="comments" style="margin-top: 35px;" *ngIf="logged">
+    <h3>Comentarios</h3>
+    <br>
+    <div style="margin-bottom: 35px;" *ngFor="let comentarios of comentarios; ; let i = index">
+        <!-- Si es un usuario externo -->
+        <div class="sombra" *ngIf="comentarios.userId !== user.sub">
+            <br>
+            <div class="pfp-announcement" style="font-size: 14px; padding-bottom: 5px;">
+                <img [src]="logged ? getUser(comentarios.userId).url_pfp : urlPorDefecto" alt="Foto de perfíl" width="40px"
+                    style="border-radius: 100%; height: 40px;">
+                <div class="annuncio-info">
+                    <h2 style="font-size: 17px; margin-bottom: 4px;">{{ logged ? getUser(comentarios.userId).preferred_username:usernamePorDefecto}}</h2>
+                    <h3 style="font-size: 13px; font-weight: normal; color: #ad8ed4;">
+                        {{obtenerFormatoFecha(comentarios.date)}}</h3>
+                </div>
+            </div>
+            <div class="annuncio-description" style="font-size: 14px; margin: 0 25px;">{{comentarios.description}}
+            </div>
+            <br>
+        </div>
+
+        <!-- Si es el usuario logeado -->
+        <!-- TO-DO obtener informacion de otros usuario, endpoint -->
+        <div class="sombra" *ngIf="comentarios.userId === user.sub">
+            <br>
+            <div class="pfp-announcement" style="font-size: 14px; padding-bottom: 5px;">
+                <img src="{{user.url_pfp}}" alt="Foto de perfíl" width="40px"
+                    style="border-radius: 100%; height: 40px;">
+                <div class="annuncio-info">
+                    <h2 style="font-size: 17px; margin-bottom: 4px;">{{user.preferred_username}}</h2>
+                    <h3 style="font-size: 13px; font-weight: normal; color: #ad8ed4;">
+                        {{obtenerFormatoFecha(comentarios.date)}}</h3>
+                </div>
+            </div>
+            <div class="annuncio-description" style="font-size: 14px; margin: 0 25px;">{{comentarios.description}}
+            </div>
+            <br>
+            <div style="display: flex; justify-content: end; margin: 4px 20px 15px 0px;">
+                <div style="width: 50px;" class="purple-button" (click)="Eliminar(comentarios.commentId)"> 
+                    <i class="fa-regular fa-trash"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="position: fixed; bottom: 15px; right: 35px;">
+    <h4 style="font-size: 15px;">@StoryVerse</h4>
+</div>

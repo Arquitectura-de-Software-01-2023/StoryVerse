@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+<div class="profile">
+    <div style="background-image: url({{user.urlHeader}}); background-size: cover; background-position: center; color: white;">
+        <div class="center" style="padding-top: 45px;">
+            <img src="{{user.urlPfp}}" alt="Foto de perfíl" width="200px" style="border-radius: 100%; height: 200px;">
+        </div>
+        <div class="center" style="margin: 15px;">
+            <h1>{{user.username}}</h1>
+        </div>
+        <div class="center" style="padding-bottom: 45px;">
+            <div>
+                <h4 class="center">{{cantStories}}</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <div>
+                <h4 class="center">{{libraryStories}}</h4>
+                <p>Biblioteca</p>
+            </div>
+            <div>
+                <a href="/followers">
+                    <h4 class="center">{{following}}</h4>
+                    <p>Seguidores</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light espacio" style="padding: 0; padding-top: 8px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" style="padding-right: 60px;" href="/profile">Acerca de<span class="sr-only">(current)</span></a>
+                    <hr style="border-width: 2.5px; background-color: #c7bad8;">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="padding-right: 60px;" href="/announcement">Anuncios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="padding-right: 60px;" href="/following">Siguiendo</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link center" href="/edit-profile">
+                        <i class="fa-solid fa-gear" style="font-size: 25px;"></i>
+                        &nbsp;Editar perfil
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr class="espacio">
+    <div class="decript-stories espacio">
+        <div class="description sombra">
+            <p>{{user.description}}</p>
+        </div>
+        <div class="stories sombra">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="display: block;">
+                    <h4 style="font-weight: bold;">Tus historias</h4>
+                    <p style="padding: 0;">Tiene {{cantStories}} historias publicadas</p>
+                </div>
+                <div> 
+                    <a href="/mystories">
+                        <i class="fa-solid fa-gear setting-icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="own-stories" style="margin-top: 15px;">
+                <div class="story" *ngFor="let story of ownStories" style="display: flex;">
+                    <img class="sombra" src="{{story.urlCover}}" alt="Portada {{story.title}}" width="30%" style="height: 250px; margin-right: 25px;">
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <h4 style="font-weight: bold;">{{story.title}}</h4>
+                        <div style="display: flex; align-items: center; margin: 8px 0;">
+                            <i class="fa-solid fa-star" style="font-size: 14px; color: #635d6c;"></i>
+                            <p style="font-size: 12px; padding-left: 10px; color: #635d6c;">{{story.votes}}</p>
+                            <i class="fa-solid fa-list" style="font-size: 14px; color: #635d6c;"></i>
+                            <p style="font-size: 12px; padding-left: 10px; color: #635d6c;">{{story.cantChapters}}</p>
+                        </div>
+                        <p style="padding: 0; font-size: 12px;">{{story.description}}</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="position: fixed; bottom: 10px; right: 10px;">
+        <h4 style="font-size: 15px;">@StoryVerse</h4>
+    </div>
+</div>
+<!--Iconos-->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" integrity="tu-clave-de-api" crossorigin="anonymous">

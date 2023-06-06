@@ -1,0 +1,66 @@
+service: aws-storyverse # Nombre del servicio
+frameworkVersion: '3' # Versión del framework
+
+# Configurar AWS
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1 # Región de AWS
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:* # Permisos de S3
+      Resource: "arn:aws:s3:::aws-storyverse-bucket-dev/*" # ARN del depósito de S3
+
+functions:
+  # Función para subir archivos a S3
+  s3FileUploader: # Nombre de la función
+    handler: src/upload.handler # Nombre del archivo y función
+    name: s3-file-uploader # Nombre real de la función lambda
+    description: Es un controlador lambda que carga una imagen en un depósito S3 # Descripción de la función
+    timeout: 60 # Tiempo de espera de la función (segundos)
+    memorySize: 256 # Memoria máxima que puede usar la función (MB)
+    events:
+      - httpApi:
+          path: /file
+          method: POST
+  # Función para eliminar archivos de S3
+  s3FileDelete: # Nombre de la función
+    handler: src/delete.handler # Nombre del archivo y función
+    name: s3-file-delete # Nombre real de la función lambda'
+    description: Es un controlador lambda que elimina una imagen de un depósito S3 # Descripción de la función
+    timeout: 10 # Tiempo de espera de la función (segundos)
+    memorySize: 128 # Memoria máxima que puede usar la función (MB)
+    events:
+      - httpApi:
+          path: /file/{fileKey}
+          method: DELETE
+
+# Configurar S3
+resources:
+  Resources:
+    StoryverseBucket: # Nombre del depósito de S3
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: aws-storyverse-bucket-dev # Nombre del depósito de S3
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: false
+          BlockPublicPolicy: false
+          IgnorePublicAcls: false
+        OwnershipControls:
+          Rules:
+            - ObjectOwnership: ObjectWriter
+    PublicBucketPolicy: # Política de acceso público
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref StoryverseBucket
+        PolicyDocument:
+          Statement:
+            - Action:
+                - s3:GetObject
+                - s3:PutObject
+                - s3:DeleteObject
+              Effect: Allow
+              Resource: 
+                - !Sub "arn:aws:s3:::aws-storyverse-bucket-dev/*"
+              Principal: "*"

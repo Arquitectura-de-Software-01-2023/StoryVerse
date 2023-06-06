@@ -1,0 +1,811 @@
+12:23:04.073 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://ms-config-server:8888
+12:23:05.294 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://ms-config-server:8888. Will be trying the next url if available
+12:23:05.294 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://ms-config-server:8888/ms-story/test": ms-config-server; nested exception is java.net.UnknownHostException: ms-config-server
+12:23:05.298 [main] INFO  c.e.msstory.MsStoryApplicationKt - The following 1 profile is active: "test"
+12:23:07.655 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:23:08.017 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 348 ms. Found 9 JPA repository interfaces.
+12:23:09.230 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4deaa964-c671-367b-93b8-d946f7864441
+12:23:11.518 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7777 (http)
+12:23:11.536 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7777"]
+12:23:11.537 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:23:11.537 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+12:23:11.874 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:23:11.874 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6528 ms
+12:23:14.427 [pool-1-thread-1] WARN  o.s.c.s.a.z.ZipkinAutoConfiguration - Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+12:23:18.907 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:23:19.013 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+12:23:19.329 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+12:23:19.574 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:103)
+	at org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:87)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:272)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:295)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:252)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:910)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.example.msstory.MsStoryApplicationKt.main(MsStoryApplication.kt:39)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 47 common frames omitted
+12:23:19.578 [main] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+12:23:19.580 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+12:23:20.625 [main] WARN  z.r.AsyncReporter$BoundedAsyncReporter - Timed out waiting for in-flight spans to send
+12:23:20.631 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:23:20.660 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+12:23:20.684 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:910)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.example.msstory.MsStoryApplicationKt.main(MsStoryApplication.kt:39)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:284)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:295)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:252)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:138)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:272)
+	... 33 common frames omitted
+12:23:20.686 [Thread-3] INFO  o.s.c.s.a.z.ZipkinAutoConfiguration - Flushing remaining spans on shutdown
+12:25:33.536 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://ms-config-server:8888
+12:25:34.677 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://ms-config-server:8888. Will be trying the next url if available
+12:25:34.677 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://ms-config-server:8888/ms-story/test": ms-config-server; nested exception is java.net.UnknownHostException: ms-config-server
+12:25:34.680 [main] INFO  c.e.msstory.MsStoryApplicationKt - The following 1 profile is active: "test"
+12:25:36.051 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:25:36.289 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 225 ms. Found 9 JPA repository interfaces.
+12:25:36.947 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4deaa964-c671-367b-93b8-d946f7864441
+12:25:38.280 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7777 (http)
+12:25:38.290 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7777"]
+12:25:38.291 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:25:38.292 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+12:25:38.511 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:25:38.511 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3809 ms
+12:25:39.902 [pool-1-thread-1] WARN  o.s.c.s.a.z.ZipkinAutoConfiguration - Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+12:25:43.204 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:25:43.272 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+12:25:43.479 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+12:25:43.824 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:25:44.472 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:25:44.490 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:25:46.238 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:25:46.794 [main] INFO  o.s.c.o.FeignClientFactoryBean - For 'ms-user' URL not provided. Will try picking an instance via load-balancing.
+12:25:49.514 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+12:25:49.992 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+12:25:50.130 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 27 endpoint(s) beneath base path '/actuator'
+12:25:50.260 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+12:25:50.368 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+12:25:50.376 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:25:50.414 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+12:25:50.414 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+12:25:50.414 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+12:25:50.415 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+12:25:50.415 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+12:25:50.415 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+12:25:50.415 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+12:25:50.615 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+12:25:50.622 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+12:25:50.629 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+12:25:50.648 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1685204750647 with initial instances count: 0
+12:25:50.667 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS-STORY with eureka with status UP
+12:25:50.668 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1685204750668, current=UP, previous=STARTING]
+12:25:50.671 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7777"]
+12:25:50.672 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-STORY/host.docker.internal:ms-story:7777: registering service...
+12:25:50.708 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7777 (http) with context path ''
+12:25:50.709 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 7777
+12:25:50.725 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-STORY/host.docker.internal:ms-story:7777 - registration status: 204
+12:25:50.894 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [sparrow-01.rmq.cloudamqp.com:5672]
+12:25:51.757 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#7369208e:0/SimpleConnection@3f0938c4 [delegate=amqp://ycjhbtfr@3.73.223.59:5672/ycjhbtfr, localPort= 5663]
+12:25:53.444 [main] INFO  c.e.msstory.MsStoryApplicationKt - Started MsStoryApplicationKt in 21.986 seconds (JVM running for 22.713)
+12:26:20.636 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+12:26:20.637 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+12:26:20.637 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+12:26:20.637 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+12:26:20.637 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+12:26:20.637 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+12:26:20.637 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+12:26:20.661 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+12:27:57.312 [http-nio-7777-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:27:57.312 [http-nio-7777-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:27:57.315 [http-nio-7777-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+12:27:57.420 [http-nio-7777-exec-4] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+12:27:57.420 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+12:27:57.420 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+12:27:57.421 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+12:27:57.476 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+12:27:57.492 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+12:27:57.537 [http-nio-7777-exec-6] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+12:27:57.537 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+12:27:57.593 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.WriterBl - El escritor no existe.
+12:27:58.370 [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] WARN  z.r.AsyncReporter$BoundedAsyncReporter - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+12:27:58.373 [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] WARN  z.r.AsyncReporter$BoundedAsyncReporter - Dropped 5 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:67)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:666)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51)
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150)
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140)
+	at zipkin2.Call$Base.execute(Call.java:391)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 11 common frames omitted
+12:28:00.805 [http-nio-7777-exec-7] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+12:28:00.805 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+12:28:00.811 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+12:28:00.812 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+12:28:00.871 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+12:28:00.885 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+12:28:00.900 [http-nio-7777-exec-9] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+12:28:00.900 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+12:28:00.950 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.WriterBl - El escritor no existe.
+12:28:02.689 [http-nio-7777-exec-1] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+12:28:02.691 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+12:28:02.691 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+12:28:02.691 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+12:28:02.744 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+12:28:02.751 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+12:28:02.768 [http-nio-7777-exec-3] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+12:28:02.768 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+12:28:02.822 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.WriterBl - El escritor no existe.
+12:28:08.650 [http-nio-7777-exec-7] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+12:28:08.651 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+12:28:08.737 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+12:28:09.375 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+12:28:09.375 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+12:28:09.377 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+12:28:09.378 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+12:28:09.456 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+12:28:09.464 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+12:28:09.545 [http-nio-7777-exec-4] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+12:28:09.545 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+12:28:09.594 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+12:28:54.924 [http-nio-7777-exec-3] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+12:28:55.694 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+12:28:55.747 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+12:28:55.747 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+12:28:55.755 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+12:30:50.426 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:35:50.440 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:40:50.450 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:45:50.461 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:50:50.472 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:51:13.261 [http-nio-7777-exec-9] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de la biblioteca del usuario.
+12:51:13.927 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.LibraryBl - Iniciando logica para obtener los libros de la biblioteca.
+12:51:13.982 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.LibraryBl - Se obtuvieron los libros de la biblioteca.
+12:51:45.875 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de la biblioteca del usuario.
+12:51:46.439 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.LibraryBl - Iniciando logica para obtener los libros de la biblioteca.
+12:51:46.492 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.LibraryBl - Se obtuvieron los libros de la biblioteca.
+12:55:50.486 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:59:02.370 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+12:59:02.371 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+12:59:02.425 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+12:59:03.779 [http-nio-7777-exec-7] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+12:59:03.780 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+12:59:03.782 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+12:59:03.784 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+12:59:03.832 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+12:59:03.835 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+12:59:03.847 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+12:59:03.847 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+12:59:03.884 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+12:59:05.333 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+12:59:05.333 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+12:59:05.386 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+12:59:05.957 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+12:59:05.957 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+12:59:05.960 [http-nio-7777-exec-6] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+12:59:05.960 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+12:59:06.002 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+12:59:06.016 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+12:59:06.019 [http-nio-7777-exec-7] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+12:59:06.019 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+12:59:06.059 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.WriterBl - El escritor no existe.
+12:59:07.191 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+12:59:07.191 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+12:59:07.239 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+12:59:07.672 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+12:59:07.672 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+12:59:07.675 [http-nio-7777-exec-1] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+12:59:07.675 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+12:59:07.716 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+12:59:07.730 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+12:59:07.740 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+12:59:07.741 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+12:59:07.781 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+12:59:09.040 [http-nio-7777-exec-6] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+12:59:09.041 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+12:59:09.098 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+12:59:09.907 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+12:59:09.908 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+12:59:09.911 [http-nio-7777-exec-9] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+12:59:09.913 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+12:59:09.969 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+12:59:09.972 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+12:59:09.983 [http-nio-7777-exec-1] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+12:59:09.983 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+12:59:10.019 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+12:59:14.920 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+12:59:15.479 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+12:59:15.525 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+12:59:15.525 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+12:59:15.530 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+13:00:50.497 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:05:50.507 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:10:50.512 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:15:50.517 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:20:50.528 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:25:50.540 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:28:49.489 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de la biblioteca del usuario.
+13:28:50.082 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.LibraryBl - Iniciando logica para obtener los libros de la biblioteca.
+13:28:50.133 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.LibraryBl - Se obtuvieron los libros de la biblioteca.
+13:28:51.163 [http-nio-7777-exec-9] INFO  com.example.msstory.api.StoryApi - Inicio de eliminacion de una historia de la biblioteca del usuario.
+13:28:51.217 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.LibraryBl - Iniciando logica para eliminar un libro de la biblioteca.
+13:28:51.313 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.LibraryBl - El libro fue eliminado de la biblioteca correctamente.
+13:28:52.195 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de la biblioteca del usuario.
+13:28:52.753 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.LibraryBl - Iniciando logica para obtener los libros de la biblioteca.
+13:28:52.810 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.LibraryBl - Se obtuvieron los libros de la biblioteca.
+13:30:50.552 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:32:10.616 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de la biblioteca del usuario.
+13:32:11.194 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.LibraryBl - Iniciando logica para obtener los libros de la biblioteca.
+13:32:11.249 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.LibraryBl - Se obtuvieron los libros de la biblioteca.
+13:32:13.569 [http-nio-7777-exec-6] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+13:32:14.152 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+13:32:14.194 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+13:32:14.195 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+13:32:14.200 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+13:35:39.367 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+13:35:39.941 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+13:35:39.983 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+13:35:39.983 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+13:35:39.987 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+13:35:50.557 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:40:50.564 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:45:50.579 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:50:50.585 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:55:50.600 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:00:50.603 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:05:50.610 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:10:50.618 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:15:50.628 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:20:50.642 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:25:50.652 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:30:50.663 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:35:50.670 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:40:50.676 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:44:15.087 [http-nio-7777-exec-1] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+14:44:15.649 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+14:44:15.700 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+14:44:15.701 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+14:44:15.705 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+14:45:50.692 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:50:50.700 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:55:50.713 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:00:50.723 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:05:50.729 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:10:50.732 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:15:50.747 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:17:45.139 [http-nio-7777-exec-3] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+15:17:45.704 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+15:17:45.746 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+15:17:45.746 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+15:17:45.750 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+15:18:23.736 [http-nio-7777-exec-7] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+15:18:24.289 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+15:18:24.332 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+15:18:24.332 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+15:18:24.337 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+15:18:59.420 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+15:18:59.983 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+15:19:00.024 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+15:19:00.025 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+15:19:00.029 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+15:20:50.754 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:25:50.766 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:30:50.770 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:34:27.236 [http-nio-7777-exec-1] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+15:34:27.808 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+15:34:27.852 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+15:34:27.852 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+15:34:27.857 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+15:34:35.077 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+15:34:35.078 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+15:34:35.131 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+15:34:35.890 [http-nio-7777-exec-7] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+15:34:35.891 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+15:34:35.892 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+15:34:35.892 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+15:34:35.977 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+15:34:35.979 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+15:34:35.996 [http-nio-7777-exec-9] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+15:34:35.996 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+15:34:36.034 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+15:34:40.287 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+15:34:40.287 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+15:34:40.289 [http-nio-7777-exec-1] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+15:34:40.290 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+15:34:40.338 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+15:34:40.343 [http-nio-7777-exec-1] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+15:34:40.356 [http-nio-7777-exec-4] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+15:34:40.356 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+15:34:40.396 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+15:34:42.021 [http-nio-7777-exec-3] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+15:34:42.021 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+15:34:42.068 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+15:34:44.310 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+15:34:44.310 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+15:34:44.361 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+15:34:45.563 [http-nio-7777-exec-9] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+15:34:45.564 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+15:34:45.567 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+15:34:45.567 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+15:34:45.612 [http-nio-7777-exec-9] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+15:34:45.618 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+15:34:45.669 [http-nio-7777-exec-4] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+15:34:45.669 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+15:34:45.713 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+15:34:54.373 [http-nio-7777-exec-3] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+15:34:54.934 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+15:34:54.976 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+15:34:54.976 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+15:34:54.981 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+15:35:50.781 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:38:41.200 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+15:38:41.759 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+15:38:41.803 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+15:38:41.803 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+15:38:41.808 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+15:38:45.959 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+15:38:45.960 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+15:38:46.012 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+15:38:46.988 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+15:38:46.989 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+15:38:46.993 [http-nio-7777-exec-3] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+15:38:46.993 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+15:38:47.035 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+15:38:47.041 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+15:38:47.099 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+15:38:47.099 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+15:38:47.143 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+15:40:42.664 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+15:40:42.664 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+15:40:42.713 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+15:40:43.583 [http-nio-7777-exec-3] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+15:40:43.584 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+15:40:43.583 [http-nio-7777-exec-4] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+15:40:43.585 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+15:40:43.633 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+15:40:43.638 [http-nio-7777-exec-3] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+15:40:43.651 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+15:40:43.651 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+15:40:43.698 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+15:40:50.796 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:44:19.344 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+15:44:19.903 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+15:44:19.953 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+15:44:19.953 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+15:44:19.957 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+15:45:08.975 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+15:45:08.975 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+15:45:09.024 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+15:45:09.716 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+15:45:09.716 [http-nio-7777-exec-6] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+15:45:09.716 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+15:45:09.716 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+15:45:09.767 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+15:45:09.772 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+15:45:09.782 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+15:45:09.782 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+15:45:09.821 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+15:45:37.617 [http-nio-7777-exec-2] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+15:45:38.176 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+15:45:38.218 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+15:45:38.218 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+15:45:38.222 [http-nio-7777-exec-2] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+15:45:44.530 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+15:45:44.530 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+15:45:44.584 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+15:45:45.123 [http-nio-7777-exec-6] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+15:45:45.124 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+15:45:45.125 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+15:45:45.126 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+15:45:45.165 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+15:45:45.179 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+15:45:45.232 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+15:45:45.232 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+15:45:45.275 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+15:45:50.812 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:50:50.819 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:55:50.831 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:00:50.841 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:05:50.847 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:10:50.852 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:11:30.798 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo historias por categoria.
+16:11:30.799 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias mediante el categoryId.
+16:11:30.846 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Lista de historias obtenida correctamente.
+16:11:31.709 [http-nio-7777-exec-6] INFO  com.example.msstory.api.StoryApi - Obteniendo los datos de una historia.
+16:11:31.709 [http-nio-7777-exec-8] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion de los capitulos de la historia.
+16:11:31.709 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener una historia mediante el storyId.
+16:11:31.709 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Iniciando logica para obtener los capitulos mediante el storyId.
+16:11:31.756 [http-nio-7777-exec-8] INFO  com.example.msstory.bl.ChapterBl - Se obtuvieron los capitulos de la historia mediante el storyId.
+16:11:31.757 [http-nio-7777-exec-6] INFO  com.example.msstory.bl.StoryBl - Historia obtenida correctamente.
+16:11:31.773 [http-nio-7777-exec-10] INFO  com.example.msstory.api.StoryApi - Inicio de obtencion del userId del escritor.
+16:11:31.773 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el userId del escritor.
+16:11:31.808 [http-nio-7777-exec-10] INFO  com.example.msstory.bl.WriterBl - El escritor existe.
+16:12:53.473 [http-nio-7777-exec-5] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+16:12:54.040 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+16:12:54.088 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+16:12:54.089 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+16:12:54.093 [http-nio-7777-exec-5] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+16:13:02.207 [http-nio-7777-exec-4] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+16:13:02.755 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+16:13:02.797 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+16:13:02.798 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+16:13:02.801 [http-nio-7777-exec-4] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+16:14:35.963 [http-nio-7777-exec-7] INFO  com.example.msstory.api.StoryApi - Obteniendo las historias del usuario carlos
+16:14:36.524 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.WriterBl - Iniciando logica para obtener el writerId del usuario.
+16:14:36.573 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.WriterBl - El escritor ya existe.
+16:14:36.574 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Iniciando logica para obtener lista de historias que fueron escritas por el usuario mediante el writerId.
+16:14:36.578 [http-nio-7777-exec-7] INFO  com.example.msstory.bl.StoryBl - Lista de historias que fueron escritas por el usuario obtenida correctamente.
+16:15:50.867 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:20:50.881 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:25:50.893 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:30:50.895 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:35:50.900 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:37:41.257 [Thread-3] INFO  o.s.c.s.a.z.ZipkinAutoConfiguration - Flushing remaining spans on shutdown
+16:37:41.261 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS-STORY with eureka with status DOWN
+16:37:41.261 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1685219861261, current=DOWN, previous=UP]
+16:37:41.262 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-STORY/host.docker.internal:ms-story:7777: registering service...
+16:37:41.274 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8723/eureka/} exception=I/O error on POST request for "http://localhost:8723/eureka/apps/MS-STORY": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8723/eureka/apps/MS-STORY": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 34 more
+
+16:37:41.275 [DiscoveryClient-InstanceInfoReplicator-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8723/eureka/apps/MS-STORY": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+16:37:41.286 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8723/eureka/}, exception=I/O error on POST request for "http://localhost:8723/eureka/apps/MS-STORY": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8723/eureka/apps/MS-STORY": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 22 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 35 more
+
+16:37:41.286 [DiscoveryClient-InstanceInfoReplicator-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8723/eureka/apps/MS-STORY": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+16:37:41.286 [DiscoveryClient-InstanceInfoReplicator-0] WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-STORY/host.docker.internal:ms-story:7777 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+16:37:41.287 [DiscoveryClient-InstanceInfoReplicator-0] WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+16:37:41.469 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+16:37:41.985 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+16:37:42.013 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+16:37:42.022 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:37:42.316 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+16:37:45.342 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+16:37:45.348 [SpringApplicationShutdownHook] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8723/eureka/}, exception=I/O error on DELETE request for "http://localhost:8723/eureka/apps/MS-STORY/host.docker.internal:ms-story:7777": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8723/eureka/apps/MS-STORY/host.docker.internal:ms-story:7777": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1077)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 40 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 53 more
+
+16:37:45.348 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8723/eureka/apps/MS-STORY/host.docker.internal:ms-story:7777": Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8723 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+16:37:45.349 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-STORY/host.docker.internal:ms-story:7777 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1077)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+16:37:45.412 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

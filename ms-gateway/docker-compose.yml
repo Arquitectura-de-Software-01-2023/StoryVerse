@@ -1,0 +1,151 @@
+version: '2.4'
+networks:
+    network-database:
+        external: true
+services:
+    ms-discovery:
+      image: ms-discovery:0.0.1
+      restart: always
+      mem_limit: 400m
+      ports:
+        - "8723:8723"
+      networks:
+        - network-database
+      environment:
+        SERVER_URI: "${SERVER_URI}"
+        SPRING_PROFILE: "${SPRING_PROFILE}"
+      volumes:
+        - C:/logs/ms-discovery:/logs
+
+    ms-gateway:
+      image: ms-gateway:0.0.1
+      restart: always
+      mem_limit: 400m
+      ports:
+        - "8111:8111"
+      networks:
+        - network-database
+      environment:
+        SERVER_URI: "${SERVER_URI}"
+        SPRING_PROFILE: "${SPRING_PROFILE}"
+      depends_on:
+        - ms-discovery
+      volumes:
+        - C:/logs/ms-gateway:/logs
+
+    postgres:
+      image: postgres:15
+      ports:
+        - "5432:5432"
+      networks:
+        - network-database
+      environment:
+        POSTGRES_PASSWORD: password
+      volumes:
+        - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+        #windows
+        #- C:/Users/Nao/Desktop/postgres-arqui-2:/var/lib/postgresql/data
+        #Linux
+        #- /nao/Desktop/postgres-arqui-2:/var/lib/postgresql/data
+        - ${VOLUME_PATH}
+
+    keycloak:
+      hostname: keycloak
+      image: quay.io/keycloak/keycloak:21.1.1
+      ports:
+        - "8080:8080"
+      networks:
+        - network-database
+      environment:
+        KEYCLOAK_ADMIN: StoryVerse-keycloak-3
+        KEYCLOAK_ADMIN_PASSWORD: H3cqnspoXmt:eS,LyV
+      volumes:
+        - ./mitema/:/opt/keycloak/themes/mitema/
+        - ./h2/:/opt/keycloak/data/h2/
+      # command: ["./opt/keycloak/bin/kc.sh start-dev"]
+      command:
+      - start-dev
+      - --import-realm
+
+    # mailHog
+    mailhog:
+      image: mailhog/mailhog
+      ports:
+        - "8025:8025"
+        - "1025:1025"
+
+    ms-user:
+      image: ms-user:0.0.1
+      restart: always
+      mem_limit: 400m
+      ports:
+        - "8008:8008"
+      networks:
+        - network-database
+      environment:
+        SERVER_URI: "${SERVER_URI}"
+        SPRING_PROFILE: "${SPRING_PROFILE}"
+        URL_DB: "${URL_DB}"
+        USERNAME_DB: "${USERNAME_DB}"
+        PASSWORD_DB: "${PASSWORD_DB}"
+        KEYCLOAK_USERINFO_URL: "${KEYCLOAK_USERINFO_URL}"
+        KEYCLOAK_ACCOUNT_URL: "${KEYCLOAK_ACCOUNT_URL}"
+        URL_ZIPKIN: "${URL_ZIPKIN}"
+        URL_EUREKA: "${URL_EUREKA}"
+        URL_KEYCLOAK: "${URL_KEYCLOAK}"
+        REALM_KEYCLOAK: "${REALM_KEYCLOAK}"
+        CREDENTIALS_SECRET_KEYCLOAK: "${CREDENTIALS_SECRET_KEYCLOAK}"
+        CLIENT_KEYCLOAK: "${CLIENT_KEYCLOAK}"
+      depends_on:
+        - ms-discovery
+        - postgres
+      volumes:
+        - C:/logs/ms-user:/logs
+
+    frontend:
+      image: frontend:0.0.1
+      restart: always
+      ports:
+        - "4200:80"
+      networks:
+        - network-database
+      environment:
+        URL_KEYCLOAK: "${URL_KEYCLOAK}"
+        URL_GATEWAY: "${URL_GATEWAY}"
+      volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf
+      depends_on:
+        - ms-user
+
+    # Zipkin
+    zipkin:
+      hostname: zipkin
+      image: openzipkin/zipkin
+      ports:
+        - "9411:9411"
+
+    # ms-story
+    ms-story:
+      image: ms-story:0.0.1
+      restart: always
+      mem_limit: 400m
+      ports:
+        - "7777:7777"
+      networks:
+        - network-database
+      environment:
+        SERVER_URI: "${SERVER_URI}"
+        SPRING_PROFILE: "${SPRING_PROFILE}"
+        USERNAME_DB: "${USERNAME_DB}"
+        PASSWORD_DB: "${PASSWORD_DB}"
+        URL_DB: "${URL_DB}"
+        URL_ZIPKIN: "${URL_ZIPKIN}"
+        URL_EUREKA: "${URL_EUREKA}"
+        URL_KEYCLOAK: "${URL_KEYCLOAK}"
+        REALM_KEYCLOAK: "${REALM_KEYCLOAK}"
+        CREDENTIALS_SECRET_KEYCLOAK: "${CREDENTIALS_SECRET_KEYCLOAK}"
+      depends_on:
+        - ms-discovery
+        - postgres
+      volumes:
+        - C:/logs/ms-story:/logs
